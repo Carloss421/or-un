@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
   for (const [id, voiceChannel] of seskanallari) westracc += voiceChannel.members.size;
   const westraembed = new westradiscord.MessageEmbed()
   .setColor("0x36393F")
-  .setTitle("Crypto - Say")
+  .setTitle(`${client.user.username} | Say Sistemi `)
   .setFooter("Crypto")
   .setTimestamp()
   .setDescription(`

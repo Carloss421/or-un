@@ -6,7 +6,7 @@ let prefix = ayarlar.prefix
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
   .setColor(0x36393F)
- .setAuthor(`\<:emoji_4:914183102182588436> ${client.user.username} | Kullanıcı Yardım Menüsü`)
+ .setAuthor(`${client.user.username} | Kullanıcı Yardım Menüsü`)
  .setDescription(`
 \<:emoji_10:914183491892183071> **davet** \n-> Botu davet edersiniz.
 \<:emoji_10:914183491892183071> **$shardbilgi** \n-> Botun shard bilgilerini gösterir.

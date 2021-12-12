@@ -6,7 +6,7 @@ let prefix = ayarlar.prefix
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
   .setColor(0x36393F)
- .setAuthor(`\<a:Kupa:919597271362973746> ${client.user.username} | Moderasyon Yardım Menüsü`)
+ .setAuthor(`${client.user.username} | Moderasyon Yardım Menüsü`)
  .setDescription(`
 \<a:Zil:919596837357379584> **${prefix}mod-log #kanal** \n-> Mod-log ayarlar.
 \<a:Zil:919596837357379584> **${prefix}mod-log sıfırla** \n-> Mod-log sıfırlar.

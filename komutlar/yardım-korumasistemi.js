@@ -6,12 +6,12 @@ let prefix = ayarlar.prefix
 exports.run = (client, message) => {
  const WestraEmbed = new WestraDiscord.MessageEmbed()
   .setColor(0x36393F)
- .setAuthor(`\<:emoji_3:914183053646131200> ${client.user.username} | Koruma Sistemi Yardım Menüsü`)
+ .setAuthor(`${client.user.username} | Koruma Sistemi Yardım Menüsü`)
  .setDescription(`
 \<:emoji_8:914183385516216380> **${prefix}ban-koruma #kanal** \n-> Ban koruma sistemini açar.
 \<:emoji_8:914183385516216380> **${prefix}ban-koruma-sıfırla** \n-> Ban koruma sistemini sıfırlar.
 \<:emoji_8:914183385516216380> **${prefix}kanal-koruma #kanal** \n-> Kanal koruma sistemini açar.
-\<:emoji_8:914183385516216380>\<:emoji_8:914183385516216380> **${prefix}kanal-koruma-sıfırla** \n-> Kanal koruma sistemini sıfırlar.
+\<:emoji_8:914183385516216380> **${prefix}kanal-koruma-sıfırla** \n-> Kanal koruma sistemini sıfırlar.
 \<:emoji_8:914183385516216380> **${prefix}rol-koruma #kanal** \n-> Rol koruma sistemini açar.
 \<:emoji_8:914183385516216380> **${prefix}rol-koruma-sıfırla** \n-> Rol koruma sistemini sıfırlar.
 \<:emoji_8:914183385516216380> **${prefix}spam-koruma** \n-> Spam koruma sistemini açar.

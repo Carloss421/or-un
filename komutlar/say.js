@@ -26,13 +26,13 @@ exports.run = async (client, message, args) => {
   .setFooter("Crypto")
   .setTimestamp()
   .setDescription(`
-<a:cryptosiyahhalka:769956810785947669> Toplam üye sayısı: **${message.guild.memberCount}**
-<a:cryptosiyahhalka:769956810785947669> Toplam çevrimiçi üye sayısı: **${westrabroo}**
-<a:cryptosiyahhalka:769956810785947669> Toplam metin kanalı sayısı: **${metinkanallari}**
-<a:cryptosiyahhalka:769956810785947669> Toplam ses kanalı sayısı: **${seskanallari.size}**
-<a:cryptosiyahhalka:769956810785947669> Toplam çevrimiçi durumda olan üye sayısı: **${message.guild.members.cache.filter(o => o.presence.status === 'online').size}**
-<a:cryptosiyahhalka:769956810785947669> Toplam boşta durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'idle').size}**
-<a:cryptosiyahhalka:769956810785947669> Toplam rahatsız etme durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'dnd').size}**
+\<:emoji_6:914183206448799764> Toplam üye sayısı: **${message.guild.memberCount}**
+\<:emoji_6:914183206448799764> Toplam çevrimiçi üye sayısı: **${westrabroo}**
+\<:emoji_6:914183206448799764> Toplam metin kanalı sayısı: **${metinkanallari}**
+\<:emoji_6:914183206448799764> Toplam ses kanalı sayısı: **${seskanallari.size}**
+\<:emoji_6:914183206448799764> Toplam çevrimiçi durumda olan üye sayısı: **${message.guild.members.cache.filter(o => o.presence.status === 'online').size}**
+\<:emoji_6:914183206448799764> Toplam boşta durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'idle').size}**
+\<:emoji_6:914183206448799764> Toplam rahatsız etme durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'dnd').size}**
 `)
   message.channel.send(westraembed)
   }

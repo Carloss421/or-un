@@ -11,7 +11,7 @@ const embed = new Discord.MessageEmbed()
 .setImage(user.displayAvatarURL({dynamic:true})) 
 .setTimestamp()
 .setColor(`BLUE`)
-.setFooter(`Asreaper`)
+.setFooter(`LumberJack`)
 message.channel.send(embed)
  } else {
   const embed = new Discord.MessageEmbed()
@@ -20,7 +20,7 @@ message.channel.send(embed)
 .setImage(message.author.avatarURL({dynamic:true}))
 .setTimestamp()
   .setColor(`BLUE`)
-.setFooter(`Asreaper`)
+.setFooter(`LumberJack`)
 message.channel.send(embed)
  }
 };

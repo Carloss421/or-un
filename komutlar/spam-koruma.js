@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 const sistem = await data.fetch(`spam.${message.guild.id}`);
 if(sistem) return message.channel.send(nn.setDescription(` Spam koruma zaten aktif.`)).then(a => a.delete({timeout: 10000}));
 
-data.set(`spam.${message.guild.id}`, 'asreaper');
+data.set(`spam.${message.guild.id}`, 'LumberJack');
 return message.channel.send(nn.setTitle(`İşlem başarılı!`).setColor(0x36393F).setDescription(`Spam koruma başarıyla açıldı.`)).then(a => a.delete({timeout: 10000}));
 
 };

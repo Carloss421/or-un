@@ -12,7 +12,7 @@ const sıfırlandı = new discord.MessageEmbed()
 .setColor(0x36393F)
 .setDescription(` Sunucu için ayarladığınız kız rolü başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Asreaper`)
+.setFooter(`LumberJack`)
 message.channel.send(sıfırlandı)
 db.delete(`kızrol_${message.guild.id}`)
 return;
@@ -26,7 +26,7 @@ if (!rol) {
 .setColor(0x36393F)
 .setDescription(` Ayarlayacağınız kız rolünü belirtiniz!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Asreaper`)
+.setFooter(`LumberJack`)
 message.channel.send(ayarlanmadı)
 }
 db.set(`kızrol_${message.guild.id}`, rol.id)
@@ -36,7 +36,7 @@ const ayarlandı = new discord.MessageEmbed()
 .setColor(0x36393F)
 .setDescription(` Kız rolü başarıyla ${rol} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`Asreaper`)
+.setFooter(`LumberJack`)
 message.channel.send(ayarlandı)
   
 }

@@ -17,7 +17,7 @@ exports.run = (client, message) => {
  **${prefix}hentai** -> __Hentai Nsfw Atar.__
  **${prefix}pussy** -> __Pussy Nsfw Atar.__
  **${prefix}thigh** -> __Thigh Nsfw Atar.__`)
- .setFooter(`Asreaper`)
+ .setFooter(`LumberJack`)
  .setTimestamp()
  .setImage(gif)
  message.channel.send(WestraEmbed)

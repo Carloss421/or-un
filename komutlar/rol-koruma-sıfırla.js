@@ -2,7 +2,7 @@ const Discord = require("discord.js"),
   db = require("quick.db");
 
 module.exports.run = async (client, message, args) => {
-	 if(message.author.id !== message.guild.owner.user.id) return message.reply('<a:cryptored:770187639801774080> Bu komutu kullanabilmek için **Sunucu Sahibi** olmalısın!')
+	 if(message.author.id !== message.guild.owner.user.id) return message.reply('\<:emoji_7:914183247800442900> Bu komutu kullanabilmek için **Sunucu Sahibi** olmalısın!')
   let kontrol = await db.fetch(`dil_${message.guild.id}`);
   let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "c?";
   if (kontrol == "agayokaga") {
@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
       const embed = new Discord.MessageEmbed()
         .setColor(0x36393F)
         .setFooter(client.user.username, client.user.avatarURL())
-        .setDescription(`<a:cryptored:770187639801774080> Rol koruma sistemi zaten ayarlanmamış!`);
+        .setDescription(`\<:emoji_7:914183247800442900> Rol koruma sistemi zaten ayarlanmamış!`);
       message.channel.send(embed);
       return;
     }
@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
       .setColor(0x36393F)
       .setFooter(client.user.username, client.user.avatarURL())
-      .setDescription(`<a:cryptored:770187639801774080> Rol koruma sistemi sıfırlandı!`);
+      .setDescription(`\<:emoji_7:914183247800442900> Rol koruma sistemi sıfırlandı!`);
     message.channel.send(embed);
     return;
   } else {
@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
       const embed = new Discord.MessageEmbed()
         .setColor(0x36393F)
         .setFooter(client.user.username, client.user.avatarURL())
-        .setDescription(`<a:cryptored:770187639801774080> Rol koruma sistemi zaten ayarlanmamış!`);
+        .setDescription(`\<:emoji_7:914183247800442900> Rol koruma sistemi zaten ayarlanmamış!`);
       message.channel.send(embed);
       return;
     }
@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
       .setColor(0x36393F)
       .setFooter(client.user.username, client.user.avatarURL())
-      .setDescription(`<a:cryptored:770187639801774080> Rol koruma sistemi sıfırlandı!`);
+      .setDescription(`\<:emoji_7:914183247800442900> Rol koruma sistemi sıfırlandı!`);
     message.channel.send(embed);
     return;
   }

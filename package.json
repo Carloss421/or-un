@@ -24,6 +24,7 @@
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
+    "plasma-db": "^1.1.0",
     "quick.db": "^7.1.1",
     "simple-youtube-api": "^5.2.1",
     "snekfetch": "^4.0.4",

@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const db = require('quick.db');
 
 exports.run = async (client, message, args) => {
-if(message.author.id !== "602196747879448577") if(message.author.id !== "602196747879448577") return message.channel.send("hoop bilader sahip komutu bu");
+if(message.author.id !== "331765705168912384") if(message.author.id !== "602196747879448577") return message.channel.send("hoop bilader sahip komutu bu");
   let user = args[0]
   if (!user) {
     let e = new Discord.MessageEmbed()

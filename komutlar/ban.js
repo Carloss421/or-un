@@ -1,31 +1,68 @@
-const Discord = require('discord.js');
-exports.run = async (client, message, args) => {
-  
-   if (!message.member.hasPermission("BAN_MEMBERS"))
-    return message.channel.send(` Bu komutu kullanabilmek için \`Üyeleri Yasakla\` yetkisine sahip olmalısın!`);
-  
- let kullanici = message.mentions.users.first()
- if(!kullanici) return message.channel.send("Banlayacağın kişiyi etiketlemelisin!")
+const Discord = require('discord.js')
 
-const embed = new Discord.MessageEmbed()
-.setColor('RED')
-.setTitle(` ${kullanici.tag} adlı kullanıcı banlandı.`)
-.setImage(`https://media1.tenor.com/images/d856e0e0055af0d726ed9e472a3e9737/tenor.gif?itemid=8540509`)
-message.channel.send(embed)
-  message.guild.members.ban(kullanici)
+    exports.run = (client, message, args) => {
+        // Yetki
+        if(!message.member.roles.cache.some(role => (role.name === 'Ban Yetkilisi'))){
+            const CodeMareFi = new Discord.MessageEmbed()
+            .setDescription(`Bu komudu kullanmak için gerekli yetkilere sahip olman gerek.`)
+            .setColor('BLACK')
+            .setFooter('Feka')
+            return message.channel.send(CodeMareFi)
+        }
+
+        // Let Tanımları
+        let kullanıcı = message.guild.member(message.guild.members.cache.get(args[0])) || message.mentions.members.first();        let sebep = args.slice(1).join(' ');
+        let guild = message.guild;
+
+        // Özel Zaman
+        let zaman = new Date()
+        let cmfzaman = zaman.getFullYear() + "." + (zaman.getMonth() +1) + "." + zaman.getDate() + " (\`" + zaman.getHours() + ":" + zaman.getMinutes() + ":" + zaman.getSeconds() + "\`)";
+
+        if(!kullanıcı){
+            const CodeMareFi = new Discord.MessageEmbed()
+            .setDescription(`${message.author} - **Lütfen Kullanıcı Belirt**`)
+            .setColor('BLACK')
+            .setFooter('Feka')
+            return message.channel.send(CodeMareFi)
+        } else if(isNaN(kullanıcı)){
+            const CodeMareFi = new Discord.MessageEmbed()
+            .setDescription(`${message.author} - **Lütfen Geçerli Kullanıcı Belirt**`)
+            .setColor('BLACK')
+            .setFooter('Feka')
+            return message.channel.send(CodeMareFi)
+        }
+        if(!sebep){
+            const CodeMareFi = new Discord.MessageEmbed()
+            .setDescription(`${message.author} - **Lütfen Sebep Belirt**`)
+            .setColor('BLACK')
+            .setFooter('Feka')
+            return message.channel.send(CodeMareFi)
+        }
+
+        if(kullanıcı && sebep){
+            // Ban İşlemi
+            kullanıcı.ban({reason: sebep})
+
+            // Mesaj
+            const CodeMareFi = new Discord.MessageEmbed()
+            .setDescription(`
+                \` ˑ \`Banlanan Üye - **${kullanıcı}(\`${kullanıcı.id}\`)**
+                \` ˑ \`Banlayan Yetkili - **${message.author}(\`${message.author.id}\`)**
+                \` ˑ \`Ban Nedeni - **${sebep}**
+            `)
+            .setColor('BLACK')
+            .setFooter('Feka | ' + cmfzaman)
+            message.channel.send(CodeMareFi)
+        }
+    }
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: ['Ban','BAN','YASAKLA','Yasakla','yasakla'],
+    permLevel: 0
 }
 
-    exports.conf = {
-        enabled: true,
-        guildOnly: false,
-        aliases: [],
-        permLevel: 0,
-    kategori: "moderasyon",
-    };
-      
-    exports.help = {
-        name: 'ban',
-        description: 'ban',
-        usage: 'ban',
-    
-    };
+exports.help = {
+    name: 'ban'
+}

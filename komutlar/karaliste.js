@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const db = require('quick.db');
 exports.run = async (client, message, args) => {
- if(message.author.id !== "390162986926473216") if(message.author.id !== "488384549479251969") return message.channel.send("hoop bilader sahip komutu bu");
+ if(message.author.id !== "331765705168912384") if(message.author.id !== "488384549479251969") return message.channel.send("hoop bilader sahip komutu bu");
   let user = args[0]
       let sebep = args.slice(1).join(' ')
   if (!user) {
@@ -29,9 +29,9 @@ exports.run = async (client, message, args) => {
     message.channel.send({embed: embed})
   const westrabumm = new Discord.MessageEmbed()
   .setColor("RED")
-  .setFooter("Crypto")
+  .setFooter("Feka")
   .setTimestamp()
-  .setDescription(` <@${message.author.id}> adlı yetkilimiz tarafından karalisteye alındın! Artık Crypto'nun komutlarını kullanamazsın. Karalisteye alınma sebebin: **${sebep}**`)
+  .setDescription(` <@${message.author.id}> adlı yetkilimiz tarafından karalisteye alındın! Artık Feka'nın komutlarını kullanamazsın. Karalisteye alınma sebebin: **${sebep}**`)
   if (client.users.cache.get(user).send(westrabumm)){
   } else return
   

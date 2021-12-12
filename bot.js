@@ -17,7 +17,7 @@ const http = require("http");
 const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  console.log("Asreaper pinglendi.");
+  console.log("LumberJack pinglendi.");
   response.sendStatus(200);
 });
 //app.listen(8000);
@@ -189,9 +189,9 @@ let i = await db.fetch(`reklam.${msg.member.guild.id}.durum`);
            if (!msg.member.hasPermission("MANAGE_GUILD")) {
            //  if (!ayarlar.gelistiriciler.includes(msg.author.id)) return ;
 msg.delete({timeout:750});
-              const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` <@${msg.author.id}> , **Bu sunucuda reklam yapmak yasak!**`)
+              const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> <@${msg.author.id}> , **Bu sunucuda reklam yapmak yasak!**`)
 msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
-          const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${msg.author} , **Reklam yapmaya çalıştı!**`) .addField("Mesajı:",msg)
+          const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${msg.author} , **Reklam yapmaya çalıştı!**`) .addField("Mesajı:",msg)
          client.channels.cache.get(y).send(embed)
             }              
           } catch(err) {
@@ -225,7 +225,7 @@ client.on("guildBanAdd", async (guild, user) => {
       .addField(`Yasaklanan Kişi:`, user.name)
       .addField(
         `Sonuç:`,
-        `Yasaklayan kişi sunucudan açıldı!\nve yasaklanan kişinin yasağı kalktı!`
+        `\<a:Deynek:919598892608274482> Yasaklayan kişi sunucudan açıldı!\nve yasaklanan kişinin yasağı kalktı!`
       );
     client.channels.cache.get(kanal).send(embed);
   } else {
@@ -243,7 +243,7 @@ client.on("guildBanAdd", async (guild, user) => {
       .addField(`Yasaklanan Kişi:`, user.name)
       .addField(
         `Sonuç:`,
-        `Yasaklayan kişi sunucudan atıldı ve yasaklanan kişinin yasağı kalktı. `
+        `\<a:Deynek:919598892608274482> Yasaklayan kişi sunucudan atıldı ve yasaklanan kişinin yasağı kalktı. `
       );
     client.channels.cache.get(kanal).send(embed);
   }
@@ -654,7 +654,7 @@ client.on("guildMemberAdd", async member => {
 const benwestranasilsinizefenimmmmasdasd = new Discord.MessageEmbed()
 .setColor("BLUE")
 .setTimestamp()
-.setFooter(`Asreaper`)
+.setFooter(`LumberJack`)
 .setDescription( " **" +
           member.user.username +
           "** hoş geldin! Otomatik rolün verildi. Seninle beraber **" +
@@ -708,7 +708,7 @@ const sayı = await db.fetch(`mesaj.${message.guild.id}.${message.author.id}`);
 if(Date.now() < maxTime) {
   const westraaaaam = new Discord.MessageEmbed()
   .setColor(0x36393F)
-  .setDescription(` <@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
+  .setDescription(`\<a:Deynek:919598892608274482> <@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
  // .setFooter(`Bu mesaj otomatik olarak silinecektir.`)
  if (message.member.hasPermission("BAN_MEMBERS")) return ;
  message.channel.send(westraaaaam).then(msg => msg.delete({timeout: 1500}));

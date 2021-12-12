@@ -29,5 +29,5 @@ exports.conf = {
     aliases: []
     };
     exports.help = {
-    name: "mutesistem"
+    name: "mute-ayar"
     };

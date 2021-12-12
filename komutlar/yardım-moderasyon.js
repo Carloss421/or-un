@@ -16,8 +16,9 @@ exports.run = (client, message) => {
 \ **${prefix}küfürlog #kanal** \n-> Küfür-log ayarlar.
 \ **${prefix}reklamengel** \n-> Reklam engel açar/kapatır.
 \ **${prefix}reklamlog #kanal** \n-> Reklam-log ayarlar.
-\ **${prefix}sa-as aç** \n-> SA-AS sistemini açar.
-\ **${prefix}sa-as kapat** \n-> SA-AS sistemini kapatır.
+\ **${prefix}mute-ayar (log / yetkili rol / rol)** \n-> Mute sistemini ayarlar.
+\ **${prefix}tempmute** \n-> Belirtilen kullanıcıya süreli mute atar.
+\ **${prefix}unmute** \n-> Belirtilen Kullanıcının Mutesini Kaldırır.
 \ **${prefix}sil** \n-> Yazdığınız miktar kadar mesaj siler.
 \ **${prefix}say** \n-> Sunucu bilgilerini gösterir.
 \ **${prefix}oylama** \n-> Oylama yapar.

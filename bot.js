@@ -189,9 +189,9 @@ let i = await db.fetch(`reklam.${msg.member.guild.id}.durum`);
            if (!msg.member.hasPermission("MANAGE_GUILD")) {
            //  if (!ayarlar.gelistiriciler.includes(msg.author.id)) return ;
 msg.delete({timeout:750});
-              const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> <@${msg.author.id}> , **Bu sunucuda reklam yapmak yasak!**`)
+              const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<@${msg.author.id}> , **Bu sunucuda reklam yapmak yasak!**`)
 msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
-          const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${msg.author} , **Reklam yapmaya çalıştı!**`) .addField("Mesajı:",msg)
+          const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\ ${msg.author} , **Reklam yapmaya çalıştı!**`) .addField("Mesajı:",msg)
          client.channels.cache.get(y).send(embed)
             }              
           } catch(err) {
@@ -225,7 +225,7 @@ client.on("guildBanAdd", async (guild, user) => {
       .addField(`Yasaklanan Kişi:`, user.name)
       .addField(
         `Sonuç:`,
-        `\<a:Deynek:919598892608274482> Yasaklayan kişi sunucudan açıldı!\nve yasaklanan kişinin yasağı kalktı!`
+        `\ Yasaklayan kişi sunucudan açıldı!\nve yasaklanan kişinin yasağı kalktı!`
       );
     client.channels.cache.get(kanal).send(embed);
   } else {
@@ -243,7 +243,7 @@ client.on("guildBanAdd", async (guild, user) => {
       .addField(`Yasaklanan Kişi:`, user.name)
       .addField(
         `Sonuç:`,
-        `\<a:Deynek:919598892608274482> Yasaklayan kişi sunucudan atıldı ve yasaklanan kişinin yasağı kalktı. `
+        `\ Yasaklayan kişi sunucudan atıldı ve yasaklanan kişinin yasağı kalktı. `
       );
     client.channels.cache.get(kanal).send(embed);
   }
@@ -708,7 +708,7 @@ const sayı = await db.fetch(`mesaj.${message.guild.id}.${message.author.id}`);
 if(Date.now() < maxTime) {
   const westraaaaam = new Discord.MessageEmbed()
   .setColor(0x36393F)
-  .setDescription(`\<a:Deynek:919598892608274482> <@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
+  .setDescription(`\<@${message.author.id}> , **Bu sunucuda spam yapmak yasak!**`)
  // .setFooter(`Bu mesaj otomatik olarak silinecektir.`)
  if (message.member.hasPermission("BAN_MEMBERS")) return ;
  message.channel.send(westraaaaam).then(msg => msg.delete({timeout: 1500}));
@@ -1185,11 +1185,11 @@ client.on("messageUpdate", async (old, nev) => {
       if (küfür.some(word => nev.content.includes(word))) {
       if (nev.member.hasPermission("BAN_MEMBERS")) return ;
        //if (ayarlar.gelistiriciler.includes(nev.author.id)) return ;
- const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${nev.author} , **Mesajını editleyerek küfür etmeye çalıştı!**`)
+ const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\ ${nev.author} , **Mesajını editleyerek küfür etmeye çalıştı!**`)
             .addField("Mesajı:",nev)
         
             nev.delete();
-            const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${nev.author} , **Mesajı editleyerek küfür etmene izin veremem!**`) 
+            const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\ ${nev.author} , **Mesajı editleyerek küfür etmene izin veremem!**`) 
           client.channels.cache.get(y).send(embed)
             nev.channel.send(embeds).then(msg => msg.delete({timeout:5000}));
           
@@ -1214,9 +1214,9 @@ client.on("message", async msg => {
                  if (!msg.member.hasPermission("MANAGE_GUILD")) {
                  //  if (!ayarlar.gelistiriciler.includes(msg.author.id)) return ;
      msg.delete({timeout:750});
-                    const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> <@${msg.author.id}> , **Bu sunucuda küfür yasak!**`)
+                    const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\ <@${msg.author.id}> , **Bu sunucuda küfür yasak!**`)
       msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
-                const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${msg.author} , **Küfür etmeye çalıştı!**`) .addField("Mesajı:",msg)
+                const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\ ${msg.author} , **Küfür etmeye çalıştı!**`) .addField("Mesajı:",msg)
                client.channels.cache.get(y).send(embed)
                   }              
                 } catch(err) {
@@ -1230,5 +1230,5 @@ client.on("message", async msg => {
 //küfür engel son //
 
 client.on("ready", () => {
-  client.channels.cache.get('919582887936917504').join();
+  client.channels.cache.get('919631957061689355').join();
   });

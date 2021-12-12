@@ -23,16 +23,16 @@ exports.run = async (client, message, args) => {
   const westraembed = new westradiscord.MessageEmbed()
   .setColor("0x36393F")
   .setTitle(`${client.user.username} | Say Sistemi `)
-  .setFooter("Crypto")
+  .setFooter("Feka")
   .setTimestamp()
   .setDescription(`
-\<a:Nike:919607680157503562> Toplam üye sayısı: **${message.guild.memberCount}**
-\<a:Nike:919607680157503562> Toplam çevrimiçi üye sayısı: **${westrabroo}**
-\<a:Nike:919607680157503562> Toplam metin kanalı sayısı: **${metinkanallari}**
-\<a:Nike:919607680157503562> Toplam ses kanalı sayısı: **${seskanallari.size}**
-\<a:Nike:919607680157503562> Toplam çevrimiçi durumda olan üye sayısı: **${message.guild.members.cache.filter(o => o.presence.status === 'online').size}**
-\<a:Nike:919607680157503562> Toplam boşta durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'idle').size}**
-\<a:Nike:919607680157503562> Toplam rahatsız etme durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'dnd').size}**
+\Toplam üye sayısı: **${message.guild.memberCount}**
+\ Toplam çevrimiçi üye sayısı: **${westrabroo}**
+\ Toplam metin kanalı sayısı: **${metinkanallari}**
+\ Toplam ses kanalı sayısı: **${seskanallari.size}**
+\ Toplam çevrimiçi durumda olan üye sayısı: **${message.guild.members.cache.filter(o => o.presence.status === 'online').size}**
+\ Toplam boşta durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'idle').size}**
+\ Toplam rahatsız etme durumda olan üye sayısı: **${message.guild.members.cache.filter(i => i.presence.status === 'dnd').size}**
 `)
   message.channel.send(westraembed)
   }

@@ -1185,11 +1185,11 @@ client.on("messageUpdate", async (old, nev) => {
       if (küfür.some(word => nev.content.includes(word))) {
       if (nev.member.hasPermission("BAN_MEMBERS")) return ;
        //if (ayarlar.gelistiriciler.includes(nev.author.id)) return ;
- const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${nev.author} , **Mesajını editleyerek küfür etmeye çalıştı!**`)
+ const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${nev.author} , **Mesajını editleyerek küfür etmeye çalıştı!**`)
             .addField("Mesajı:",nev)
         
             nev.delete();
-            const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${nev.author} , **Mesajı editleyerek küfür etmene izin veremem!**`) 
+            const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${nev.author} , **Mesajı editleyerek küfür etmene izin veremem!**`) 
           client.channels.cache.get(y).send(embed)
             nev.channel.send(embeds).then(msg => msg.delete({timeout:5000}));
           
@@ -1214,9 +1214,9 @@ client.on("message", async msg => {
                  if (!msg.member.hasPermission("MANAGE_GUILD")) {
                  //  if (!ayarlar.gelistiriciler.includes(msg.author.id)) return ;
      msg.delete({timeout:750});
-                    const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` <@${msg.author.id}> , **Bu sunucuda küfür yasak!**`)
+                    const embeds = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> <@${msg.author.id}> , **Bu sunucuda küfür yasak!**`)
       msg.channel.send(embeds).then(msg => msg.delete({timeout: 5000}));
-                const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(` ${msg.author} , **Küfür etmeye çalıştı!**`) .addField("Mesajı:",msg)
+                const embed = new Discord.MessageEmbed() .setColor(0x36393F) .setDescription(`\<a:Deynek:919598892608274482> ${msg.author} , **Küfür etmeye çalıştı!**`) .addField("Mesajı:",msg)
                client.channels.cache.get(y).send(embed)
                   }              
                 } catch(err) {

@@ -16,7 +16,7 @@ module.exports = client => {
 
  setInterval(() => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
-  client.user.setActivity(`🌊 !yardım`, { type: 'PLAYING' ,  })
+  client.user.setActivity(`🎹 !yardım`, { type: 'PLAYING' ,  })
 }, 5000);
     console.log(`Asreaper başarıyla giriş yaptı.`);
 }

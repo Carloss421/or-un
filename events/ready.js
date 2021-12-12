@@ -16,7 +16,7 @@ module.exports = client => {
 
  setInterval(() => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
-  client.user.setActivity(`🌊 !yardım`, { type: 'PLAYING' ,  url: 'https://www.twitch.tv/mbasreaper' })
+  client.user.setActivity(`🌊 .yardım`, { type: 'PLAYING' ,  url: 'https://www.twitch.tv/mbasreaper' })
 }, 5000);
     console.log(`Asreaper başarıyla giriş yaptı.`);
 }

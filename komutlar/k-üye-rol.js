@@ -8,9 +8,9 @@ exports.run = async(client, message, args) => {
 if(args[0] === "sıfırla") {
 const sıfırlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} | Erkek rol sıfırlama komutu.`)
+.setTitle(`${client.user.username} | Üye rol sıfırlama komutu.`)
 .setColor(0x36393F)
-.setDescription(` Sunucu için ayarladığınız erkek rolü başarıyla sıfırlandı!`)
+.setDescription(` Sunucu için ayarladığınız üye rolü başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`LumberJack`)
 message.channel.send(sıfırlandı)
@@ -22,32 +22,32 @@ let rol = message.mentions.roles.first();
 if (!rol) {
   const ayarlanmadı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
-.setTitle(`${client.user.username} | Erkek rol ayarlama komutu.`)
+.setTitle(`${client.user.username} | Üye rol ayarlama komutu.`)
 .setColor(0x36393F)
-.setDescription(` Ayarlayacağınız erkek rolünü belirtiniz!`)
+.setDescription(` Ayarlayacağınız üye rolünü belirtiniz!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`LumberJack`)
+.setFooter(`Feka`)
 message.channel.send(ayarlanmadı)
 }
 db.set(`erkekrol_${message.guild.id}`, rol.id)
 const ayarlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
-.setTitle(`${client.user.username} | Erkek rol ayarlama komutu.`)
+.setTitle(`${client.user.username} | Üye rol ayarlama komutu.`)
 .setColor(0x36393F)
-.setDescription(` Erkek rolü başarıyla ${rol} olarak ayarlandı!`)
+.setDescription(` Üye rolü başarıyla ${rol} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`LumberJack`)
+.setFooter(`Feka`)
 message.channel.send(ayarlandı)
   
 }
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['erkekrol', 'erol', 'e-rol'],
+  aliases: ['üyerol', 'ürol', 'ü-rol'],
   permlevel: 0
 }
 exports.help = {
-  name: 'erkek-rol',
-  description: 'erkek rolünü ayarlar',
-  usage: '!erkek-rol @rol'
+  name: 'üye-rol',
+  description: 'üye rolünü ayarlar',
+  usage: '!üye-rol @rol'
 }

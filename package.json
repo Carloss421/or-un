@@ -16,7 +16,7 @@
     "croxydb": "^0.0.7",
     "dctr-antispam.js": "^0.1.1",
     "discord-giveaways": "^4.2.1",
-    "discord.js": "^12.4.1",
+    "discord.js": "^12.5.3",
     "express": "^4.17.1",
     "jimp": "^0.12.1",
     "moment": "^2.26.0",

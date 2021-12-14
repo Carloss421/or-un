@@ -36,9 +36,9 @@ const ayarlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Hoş geldin kanalını ayarlama komutu.`)
 .setColor(0x36393F)
-.setDescription(`LumberJack Hoş geldin kanalı ${kanal} olarak ayarlandı!`)
+.setDescription(`Feka Hoş geldin kanalı ${kanal} olarak ayarlandı!`)
 .setThumbnail(client.user.avatarURL())
-.setFooter(`LumberJack`)
+.setFooter(`Feka`)
 message.channel.send(ayarlandı)
   
 }

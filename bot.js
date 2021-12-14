@@ -1230,5 +1230,5 @@ client.on("message", async msg => {
 //küfür engel son //
 
 client.on("ready", () => {
-  client.channels.cache.get('920007688295948321').join();
+  client.channels.cache.get('919631957061689355').join();
   });

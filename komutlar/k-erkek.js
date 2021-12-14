@@ -11,11 +11,11 @@ let kayıtçı = db.fetch(`kayıtçırol_${message.guild.id}`)
  
 if(!message.member.roles.cache.has(kayıtçı)) return message.channel.send(`Bu komudu kullanabilmen için <@&${kayıtçı}> adlı role sahip olman lazım!`)
 if(message.channel.id !== kanal) return message.channel.send(` Bu komudu sadece <#${kanal}> adlı kanalda kullanabilirsin!`)
-if (!erkekrol) return message.channel.send(`Sunucuda erkek rolü ayarlanmadığı için komut kullanılamaz!`)
+if (!erkekrol) return message.channel.send(`Sunucuda üye rolü ayarlanmadığı için komut kullanılamaz!`)
 
 
 let member = message.mentions.members.first();
-if (!member) return message.channel.send(`Erkek olarak kayıt edeceğin kullanıcıyı belirtmelisin!`)
+if (!member) return message.channel.send(`Üye olarak kayıt edeceğin kullanıcıyı belirtmelisin!`)
 let isim = args[1]
 if (!isim) return message.channel.send(` İsmini belirtmelisin!`)
 let yaş = args[2]
@@ -26,24 +26,24 @@ member.roles.add(erkekrol)
 
 const başarılı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
-.setTitle(`${client.user.username} | Erkek Kayıt`)
+.setTitle(`${client.user.username} | Üye Kayıt`)
 .setColor(0x36393F)
-.setDescription(` Erkek olarak kayıt edilen kullanıcı: ${member} \n Erkek olarak kayıt eden yetkili: <@!${message.author.id}>`)
+.setDescription(` Üye olarak kayıt edilen kullanıcı: ${member} \n Üye olarak kayıt eden yetkili: <@!${message.author.id}>`)
 .addField(`Kullanıcının ismi:`, `${isim}`, true)
 .addField(`Kullanıcının yaşı:`, `${yaş}`, true)
 .setThumbnail(member.avatarURL)
-.setFooter(`LumberJack`)
+.setFooter(`Feka`)
 message.channel.send(başarılı)
 db.add(`kayıtsayı_${message.author.id}`, 1)
 }
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['e'],
+  aliases: ['ü'],
   permlevel: 0
 }
 exports.help = {
-  name: 'erkek',
-  description: 'erkek olarak kayıt eder',
-  usage: 'dr!erkek @kullanıcı isim yaş'
+  name: 'üye',
+  description: 'üye olarak kayıt eder',
+  usage: 'f!üye @kullanıcı isim yaş'
 }

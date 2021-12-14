@@ -15,12 +15,9 @@ exports.run = (client, message) => {
 \ **${prefix}kayıt-hg sıfırla** \n-> Kayıt hoş geldin kanalını sıfırlarsınız.
 \ **${prefix}kayıt-yetkili @rol** \n-> Kayıt edebilecek yetkiyi ayarlar.
 \ **${prefix}kayıt-yetkili sıfırla** \n-> Kayıt edebilecek yetkiyi sıfırlar.
-\ **${prefix}erkek-rol @rol** \n-> Kayıt edilince verilecek erkek rolü ayarlar.
-\ **${prefix}erkek-rol sıfırla** \n-> Kayıt edilince verilecek erkek rolünü sıfırlar.
-\ **${prefix}kız-rol @rol** \n-> Kayıt edilince verilecek kız rolü ayarlar.
-\ **${prefix}kız-rol sıfırla** \n-> Kayıt edilince verilecek kız rolünü sıfırlar.
-\ **${prefix}erkek @kullanıcı isim yaş** \n-> Erkekleri kayıt etmeye yarar.
-\ **${prefix}kız @kullanıcı isim yaş** \n-> Kızları kayıt etmeye yarar.
+\ **${prefix}üye-rol @rol** \n-> Kayıt edilince verilecek erkek rolü ayarlar.
+\ **${prefix}üye-rol sıfırla** \n-> Kayıt edilince verilecek erkek rolünü sıfırlar.
+\ **${prefix}üye @kullanıcı isim yaş** \n-> Erkekleri kayıt etmeye yarar.
 `)
  .setTimestamp()
  message.channel.send(WestraEmbed)

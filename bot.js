@@ -799,9 +799,7 @@ client.on("guildMemberAdd", member => {
         "YYYY HH:mm:ss"
        )}** \n  Bu vatandaş: ${kontrol} \n  <@&${kayıtçı}> rolündeki yetkililer sizinle ilgilenecektir.`);
   //
-  client.channels.cache.get(kanal).send(embed);
-  client.channnels.cache.get('920398624008052747');
-  client.channels.cache.get(kanal).send(`<@&${kayıtçı}>`);
+  client.channels.cache.get("920398624008052747").send(`<@&${kayıtçı}>`)
 });
   
 //kayıt kanal son //

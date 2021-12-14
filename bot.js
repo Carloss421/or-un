@@ -791,7 +791,7 @@ client.on("guildMemberAdd", member => {
         member.user
       }, seninle beraber **${
         guild.memberCount
-      }** kişi olduk! \n  Kaydının yapılması için **isim** ve **yaş** yazman gerek. \n  Hesap kuruluş tarihi: **${moment(
+      }** kişi olduk! \n  Kaydının yapılması için **isim** yazman gerek. \n  Hesap kuruluş tarihi: **${moment(
         user.createdAt
       ).format("DD")} ${aylar[moment(user.createdAt).format("MM")]} ${moment(
         user.createdAt

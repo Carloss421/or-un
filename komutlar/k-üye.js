@@ -18,9 +18,7 @@ let member = message.mentions.members.first();
 if (!member) return message.channel.send(`Üye olarak kayıt edeceğin kullanıcıyı belirtmelisin!`)
 let isim = args[1]
 if (!isim) return message.channel.send(` İsmini belirtmelisin!`)
-let yaş = args[2]
-if (!yaş) return message.channel.send(`Yaşını belirtmelisin!`)
-member.setNickname(`${isim} | ${yaş}`)
+member.setNickname(`${isim}`)
 member.roles.remove(alınacakrol)
 member.roles.add(erkekrol)
 

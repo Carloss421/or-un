@@ -12,9 +12,9 @@ const sıfırlandı = new discord.MessageEmbed()
 .setColor(0x36393F)
 .setDescription(` Sunucu için ayarladığınız üye rolü başarıyla sıfırlandı!`)
 .setThumbnail(client.user.avatarURL)
-.setFooter(`LumberJack`)
+.setFooter(`Feka`)
 message.channel.send(sıfırlandı)
-db.delete(`erkekrol_${message.guild.id}`)
+db.delete(`üyerol_${message.guild.id}`)
 return;
 }
 
@@ -29,7 +29,7 @@ if (!rol) {
 .setFooter(`Feka`)
 message.channel.send(ayarlanmadı)
 }
-db.set(`erkekrol_${message.guild.id}`, rol.id)
+db.set(`üyerol_${message.guild.id}`, rol.id)
 const ayarlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setTitle(`${client.user.username} | Üye rol ayarlama komutu.`)

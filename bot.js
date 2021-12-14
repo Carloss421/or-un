@@ -733,7 +733,8 @@ db.delete(`time.${message.guild.id}.${message.author.id}`);
 / AYARLANABİLİR KAYIT KANAL //
 client.on("guildMemberAdd", member => {
   let guild = member.guild;
-  
+  let kanal = db.fetch(`kayıthg_${member.guild.id}`);
+  let kayıtçı = db.fetch(`kayıtçırol_${member.guild.id}`);
   let aylartoplam = {
     "01": "Ocak",
     "02": "Şubat",
@@ -763,6 +764,8 @@ client.on("guildMemberAdd", member => {
   if (ayyy > 1) {
     kontrol = "**Güvenilir** ";
   }
+
+  if (!kanal) return;
 
   ///////////////////////
 
@@ -794,10 +797,10 @@ client.on("guildMemberAdd", member => {
         user.createdAt
       ).format(
         "YYYY HH:mm:ss"
-       )}** \n  Bu vatandaş: ${kontrol} \n  <@&920397245558448193> rolündeki yetkililer sizinle ilgilenecektir.`);
+       )}** \n  Bu vatandaş: ${kontrol} \n  <@&${kayıtçı}> rolündeki yetkililer sizinle ilgilenecektir.`);
   //
-  client.channels.cache.get('920398624008052747').send(embed);
-  client.channels.cache.get('920398624008052747').send(`<@&920397245558448193>`);
+  client.channels.cache.get(kanal).send(embed);
+  client.channels.cache.get(kanal).send(`<@&${kayıtçı}>`);
 });
   
 //kayıt kanal son //

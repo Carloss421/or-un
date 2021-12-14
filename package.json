@@ -1,9 +1,9 @@
 {
-  "//1": "Asreaper",
-  "//2": "Asreaper",
-  "name": "Asreaper",
+  "//1": "Feka",
+  "//2": "Feka",
+  "name": "Feka",
   "version": "0.0.1",
-  "description": "Asreaper",
+  "description": "Feka",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"

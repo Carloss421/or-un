@@ -320,7 +320,7 @@ client.on("guildMemberAdd", async member => {
 const benwestranasilsinizefenimmmmasdasd = new Discord.MessageEmbed()
 .setColor("BLUE")
 .setTimestamp()
-.setFooter(`LumberJack`)
+.setFooter(`Feka`)
 .setDescription( " **" +
           member.user.username +
           "** hoş geldin! Otomatik rolün verildi. Seninle beraber **" +

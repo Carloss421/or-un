@@ -17,7 +17,7 @@ exports.run = (client, message) => {
 \ **${prefix}reklamengel** \n-> Reklam engel açar/kapatır.
 \ **${prefix}reklamlog #kanal** \n-> Reklam-log ayarlar.
 \ **${prefix}mute-ayar (log / yetkili rol / rol)** \n-> Mute sistemini ayarlar.
-\ **${prefix}tempmute** \n-> Belirtilen kullanıcıya süreli mute atar.
+\ **${prefix}mute** \n-> Belirtilen kullanıcıya süreli mute atar.
 \ **${prefix}unmute** \n-> Belirtilen Kullanıcının Mutesini Kaldırır.
 \ **${prefix}sil** \n-> Yazdığınız miktar kadar mesaj siler.
 \ **${prefix}say** \n-> Sunucu bilgilerini gösterir.

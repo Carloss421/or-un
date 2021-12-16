@@ -33,5 +33,5 @@ permLevel: 0,
 aliases: []
 };
 exports.help = {
-name: "tempmute"
+name: "mute"
 };

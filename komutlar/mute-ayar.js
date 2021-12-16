@@ -1,4 +1,4 @@
-const discord = require('discord.js');
+  const discord = require('discord.js');
 const Database = require("plasma-db");
 const db = new Database("./database.json"); 
 exports.run = async(client, message, args) => {
@@ -19,7 +19,7 @@ if(args[0] == "rol") {
 let engin = message.mentions.roles.first()
 if(!engin) return message.channel.send('Lütfen mute rolünü belirtin!')
 db.set(`muterol_${message.guild.id}`, engin.id)
-return message.channel.send(`Mute rolü başarı ile <@&{engin.id}> olarak ayarlandı!`)
+return message.channel.send(`Mute rolü başarı ile <@&${engin.id}> olarak ayarlandı!`)
 }
 }
 exports.conf = {

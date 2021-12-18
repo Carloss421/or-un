@@ -925,7 +925,7 @@ Konserlerden haberdar olmak için : 🎉
 client.on('clickButton', async (button) => {
 
     if (button.id === 'KonserKatılımcısı') {
-        if (button.clicker.member.roles.cache.get((ayarlar.KonserKatılımcısı))) {
+        if (button.clicker.member.roles.cache.get((env.KonserKatılımcısı))) {
             await button.clicker.member.roles.remove((ayarlar.KonserKatılımcısı))
             await button.reply.think(true);
             await button.reply.edit("Konser Katılımcısı rolü başarıyla üzerinizden alındı!")

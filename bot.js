@@ -905,7 +905,7 @@ client.on("message", (message) => {
     if (message.content !== "f!buton" || message.author.bot) return;
 
   let KonserKatılımcısı = new matthe.MessageButton()
-    .setStyle('aqua') 
+    .setStyle('red') 
     .setLabel('🎉 Konser Katılımcısı') 
     .setID('921120819663474718');
   
@@ -924,20 +924,19 @@ Konserlerden haberdar olmak için : 🎉
   
 client.on('clickButton', async (button) => {
 
-  
+    if (button.id === 'KonserKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.KonserKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.KonserKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit("Konser Katılımcısı rolü başarıyla üzerinizden alındı!")
+        } else {
+            await button.clicker.member.roles.add(((ayarlar.KonserKatılımcısı)))
+            await button.reply.think(true);
+            await button.reply.edit("Konser Katılımcısı rolünü başarıyla aldınız!")
         }
+    }
+
     
 
-    if (button.id === 'KonserKatılımcısı') {
-        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
-            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
-            await button.reply.think(true);
-            await button.reply.edit(`Konser Katılımcısı rolü başarıyla üzerinizden alındı!`)
-        } else {
-            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
-            await button.reply.think(true);
-            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
-        }
-
-    }
+    
   });

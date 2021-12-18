@@ -11,8 +11,7 @@ const db = require("quick.db");
 const queue = new Map();
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
-const DiscordButtons = require('discord-buttons'); 
-DiscordButtons(client);
+
 //-----------------------------------------------\\
 const http = require("http");
 const express = require("express");

@@ -5,7 +5,6 @@ dependencies:
   croxy-api: 2.0.6
   croxydb: 0.0.7
   dctr-antispam.js: 0.1.1
-  discord-buttons: 4.0.0
   discord-giveaways: 4.4.3
   discord.js: 12.5.3
   express: 4.17.1
@@ -751,10 +750,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
-  /discord-buttons/4.0.0:
-    dev: false
-    resolution:
-      integrity: sha512-E/eQX4Ktj7nKwNDsTfCezBNCu73FtPWJfQcpKohfl0jct/ucMUO+7uhL2MhGsZr4SCfojk7OzccAznuntB564w==
   /discord-giveaways/4.4.3:
     dependencies:
       deepmerge: 4.2.2
@@ -1873,7 +1868,6 @@ specifiers:
   croxy-api: ^2.0.3
   croxydb: ^0.0.7
   dctr-antispam.js: ^0.1.1
-  discord-buttons: ^4.0.0
   discord-giveaways: ^4.2.1
   discord.js: ^12.5.3
   express: ^4.17.1

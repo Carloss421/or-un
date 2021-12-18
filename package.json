@@ -15,7 +15,6 @@
     "croxy-api": "^2.0.3",
     "croxydb": "^0.0.7",
     "dctr-antispam.js": "^0.1.1",
-    "discord-buttons": "^4.0.0",
     "discord-giveaways": "^4.2.1",
     "discord.js": "^12.5.3",
     "express": "^4.17.1",

@@ -11,6 +11,8 @@ const db = require("quick.db");
 const queue = new Map();
 const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
+const matthe = require('discord-buttons')
+matthe(client)
 
 //-----------------------------------------------\\
 const http = require("http");
@@ -897,4 +899,45 @@ client.on("message", async msg => {
 
 client.on("ready", () => {
   client.channels.cache.get('920007688295948321').join();
+  });
+client.on("message", (message) => {
+
+    if (message.content !== "f!buton" || message.author.bot) return;
+
+  let KonserKatılımcısı = new matthe.MessageButton()
+    .setStyle('aqua') 
+    .setLabel('🎉 Konser Katılımcısı') 
+    .setID('921120819663474718');
+  
+  message.channel.send(`
+Merhaba!!
+
+Konser Katılımcısı alarak konserler olduğunda bildiirim alabilir ve konser çekilişlişlerine katılıp ödül sahibi olabilirsiniz.
+
+Aşağıda bulunan seçeneklerden Konser Katılımcısı alarak konserlerden ve konser zamanı yapılan çekilişlerden faydalanabilir
+
+Konserlerden haberdar olmak için : 🎉
+`, { 
+    buttons: [KonserKatılımcısı]
+});
+});
+  
+client.on('clickButton', async (button) => {
+
+  
+        }
+    
+
+    if (button.id === 'KonserKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Konser Katılımcısı rolü başarıyla üzerinizden alındı!`)
+        } else {
+            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
+        }
+
+    }
   });

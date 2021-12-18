@@ -907,7 +907,7 @@ client.on("message", (message) => {
   let KonserKatılımcısı = new matthe.MessageButton()
     .setStyle('red') 
     .setLabel('🎉 Konser Katılımcısı') 
-    .setID('921120819663474718');
+    .setID('KonserKatılımcısı');
   
   message.channel.send(`
 Merhaba!!
@@ -925,12 +925,12 @@ Konserlerden haberdar olmak için : 🎉
 client.on('clickButton', async (button) => {
 
     if (button.id === 'KonserKatılımcısı') {
-        if (button.clicker.member.roles.cache.get((env.KonserKatılımcısı))) {
-            await button.clicker.member.roles.remove((ayarlar.KonserKatılımcısı))
+        if (button.clicker.member.roles.cache.get((asreaper.KonserKatılımcısı))) {
+            await button.clicker.member.roles.remove((asreaper.KonserKatılımcısı))
             await button.reply.think(true);
             await button.reply.edit("Konser Katılımcısı rolü başarıyla üzerinizden alındı!")
         } else {
-            await button.clicker.member.roles.add(((ayarlar.KonserKatılımcısı)))
+            await button.clicker.member.roles.add(((asreaper.KonserKatılımcısı)))
             await button.reply.think(true);
             await button.reply.edit("Konser Katılımcısı rolünü başarıyla aldınız!")
         }

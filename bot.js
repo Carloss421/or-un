@@ -905,18 +905,16 @@ client.on("message", (message) => {
     if (message.content !== "f!buton" || message.author.bot) return;
 
   let KonserKatılımcısı = new matthe.MessageButton()
-    .setStyle('red') 
-    .setLabel('🎉 Konser Katılımcısı') 
+    .setStyle('green') 
+    .setLabel('🎤 Konser Katılımcısı') 
     .setID('KonserKatılımcısı');
   
   message.channel.send(`
-Merhaba!!
+**Merhaba!!**
 
-Konser Katılımcısı alarak konserler olduğunda bildiirim alabilir ve konser çekilişlişlerine katılıp ödül sahibi olabilirsiniz.
+> **Aşşağıdaki butona tıklayarak Konser Katılımcısı rolüne sahip olabilir , konserlere özel chate ulaşabilir , konserlerden faydalanabilir ve konserlerden anında haberdar olabilirsin.**
 
-Aşağıda bulunan seçeneklerden Konser Katılımcısı alarak konserlerden ve konser zamanı yapılan çekilişlerden faydalanabilir
-
-Konserlerden haberdar olmak için : 🎉
+**Konserlerden haberdar olmak için : 🎤**
 `, { 
     buttons: [KonserKatılımcısı]
 });

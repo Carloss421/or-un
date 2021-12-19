@@ -914,6 +914,11 @@ client.on("message", (message) => {
     .setLabel('🎉 Çekiliş Katılımcısı') 
     .setID('ÇekilişKatılımcısı');
   
+  let SolistKonserKatılımcısı = new matthe.MessageButton()
+    .setStyle('blurple') 
+    .setLabel('🎼 Solist Konser Katılımcısı') 
+    .setID('SolistKonserKatılımcısı');
+  
   message.channel.send(`
 > **Merhaba!!**
 
@@ -922,8 +927,10 @@ client.on("message", (message) => {
 Konserlerden haberdar olmak için :  🎤
 
 Çekilişlerden haberdar olmak için : 🎉
+
+Solist konserlerden haberdar olmak için: 🎼
 `, { 
-    buttons: [ KonserKatılımcısı, ÇekilişKatılımcısı]
+    buttons: [ KonserKatılımcısı, ÇekilişKatılımcısı, SolistKonserKatılımcısı]
 });
 });
   
@@ -952,6 +959,17 @@ client.on('clickButton', async (button) => {
             await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
         }
 
+    }
+  if (button.id === 'SolistKonserKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((asreaper.SolistKonserKatılımcısı))) {
+            await button.clicker.member.roles.remove((asreaper.SolistKonserKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit("Solist Konser Katılımcısı rolü başarıyla üzerinizden alındı!")
+        } else {
+            await button.clicker.member.roles.add(((asreaper.SolistKonserKatılımcısı)))
+            await button.reply.think(true);
+            await button.reply.edit("Solist Konser Katılımcısı rolünü başarıyla aldınız!")
+        }
     }
   });
 

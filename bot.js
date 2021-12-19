@@ -438,7 +438,7 @@ client.on("guildMemberAdd", member => {
   ///////////////////////
 
   let randomgif = [ 
-             "https://api.creavite.co/out/a8348b24-b752-4f35-ab6e-89b38785d523_standard.gif"];
+             ""];
 
   ///////////////////
   const embed = new Discord.MessageEmbed()

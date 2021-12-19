@@ -903,20 +903,28 @@ client.on("ready", () => {
 client.on("message", (message) => {
 
     if (message.content !== "f!buton" || message.author.bot) return;
-
-  let KonserKatılımcısı = new matthe.MessageButton()
+  
+  let EtkinlikKatılımcısı = new matthe.MessageButton()
     .setStyle('green') 
-    .setLabel('🎤 Konser Katılımcısı') 
-    .setID('KonserKatılımcısı');
+    .setLabel('🎁 Konser Katılımcısı') 
+    .setID('EtkinlikKatılımcısı'); 
+
+  let ÇekilişKatılımcısı = new matthe.MessageButton()
+    .setStyle('red') 
+    .setLabel('🎉 Çekiliş Katılımcısı') 
+    .setID('ÇekilişKatılımcısı');
   
   message.channel.send(`
-**Merhaba!!**
+Merhaba!!
 
-> **Aşşağıdaki butona tıklayarak Konser Katılımcısı rolüne sahip olabilir , konserlere özel chate ulaşabilir , konserlerden faydalanabilir ve konserlerden anında haberdar olabilirsin.**
+Aşağıdaki butona tıklayarak Çekiliş Katılımcısı rolüne sahip olabilir, etkinlik sırasında olan çekilişlerden anında haberdar olabilirsin.
+Aşağıdaki butona tıklayarak Konser Katılımcısı rolüne sahip olabilir, konserlere özel chate ulaşabilir, konserlerden faydalanabilir ve konserlerden anında haberdar olabilirsin.
 
-**Konserlerden haberdar olmak için : 🎤**
+Konserlerden haberdar olmak için :  🎤
+
+Çekilişlerden haberdar olmak için : 🎉
 `, { 
-    buttons: [KonserKatılımcısı]
+    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
 });
 });
   
@@ -934,46 +942,17 @@ client.on('clickButton', async (button) => {
         }
     }
 
-    
-
-    
-  });
-client.on("message", (message) => {
-
-    if (message.content !== "f!buton" || message.author.bot) return;
-
-  let ÇekilişKatılımcısı = new matthe.MessageButton()
-    .setStyle('green') 
-    .setLabel('🎊 Çekiliş Katılımcısı') 
-    .setID('ÇekilişKatılımcısı');
-  
-  message.channel.send(`
-**Merhaba!!**
-
-> **Aşşağıdaki butona tıklayarak @çekiliş katılımcısı  rolüne sahip olabilir , etkinlik sırasında olan çekilişlerden anında haberdar olabilirsin.**
-
-**Çekilişlerden haberdar olmak için : 🎊**
-`, { 
-    buttons: [ÇekilişKatılımcısı]
-});
-});
-  
-client.on('clickButton', async (button) => {
-
     if (button.id === 'ÇekilişKatılımcısı') {
         if (button.clicker.member.roles.cache.get((asreaper.ÇekilişKatılımcısı))) {
             await button.clicker.member.roles.remove((asreaper.ÇekilişKatılımcısı))
             await button.reply.think(true);
-            await button.reply.edit("Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!")
+            await button.reply.edit(`Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`)
         } else {
-            await button.clicker.member.roles.add(((asreaper.ÇekilişKatılımcısı)))
+            await button.clicker.member.roles.add((asreaper.ÇekilişKatılımcısı))
             await button.reply.think(true);
-            await button.reply.edit("Çekiliş Katılımcısı rolünü başarıyla aldınız!")
+            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
         }
+
     }
-
-    
-
-    
   });
 

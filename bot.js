@@ -972,4 +972,9 @@ client.on('clickButton', async (button) => {
         }
     }
   });
+client.on('message', async (msg) => {
+if (msg.channel.id !== "922106933413040149") return;
+await msg. react('➕')
+await msg. react('➖')
+});
 

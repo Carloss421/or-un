@@ -904,9 +904,9 @@ client.on("message", (message) => {
 
     if (message.content !== "f!buton" || message.author.bot) return;
   
-  let EtkinlikKatılımcısı = new matthe.MessageButton()
+  let KonserKatılımcısı = new matthe.MessageButton()
     .setStyle('green') 
-    .setLabel('🎁 Konser Katılımcısı') 
+    .setLabel(' 🎤 Konser Katılımcısı') 
     .setID('EtkinlikKatılımcısı'); 
 
   let ÇekilişKatılımcısı = new matthe.MessageButton()
@@ -915,16 +915,15 @@ client.on("message", (message) => {
     .setID('ÇekilişKatılımcısı');
   
   message.channel.send(`
-Merhaba!!
+> **Merhaba!!**
 
-Aşağıdaki butona tıklayarak Çekiliş Katılımcısı rolüne sahip olabilir, etkinlik sırasında olan çekilişlerden anında haberdar olabilirsin.
-Aşağıdaki butona tıklayarak Konser Katılımcısı rolüne sahip olabilir, konserlere özel chate ulaşabilir, konserlerden faydalanabilir ve konserlerden anında haberdar olabilirsin.
+> **Aşağıda bulunan butonlara tıklayarak gerekli durumlarda etiketlenecek olup bu sayede bildirim alacağınız rolü alabilirsiniz. (İstemediğinizde tekrardan butona basarak rolü bırakabilirsiniz).**
 
 Konserlerden haberdar olmak için :  🎤
 
 Çekilişlerden haberdar olmak için : 🎉
 `, { 
-    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
+    buttons: [ KonserKatılımcısı, ÇekilişKatılımcısı]
 });
 });
   

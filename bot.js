@@ -963,4 +963,4 @@ client.on("message", async (msg) => {
   await msg.react("✅");
   await msg.react("⛔");
 });
-client.channels.cache.get("939910127014797342").join();
+

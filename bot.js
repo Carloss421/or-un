@@ -450,7 +450,7 @@ client.on("message", async (message) => {
     ///////////////////////
 
     let randomgif = [
-      "https://api.creavite.co/out/e7fa38ec-f81f-437e-b9b1-5236d229272c_standard.gif",
+      "",
     ];
 
     ///////////////////
@@ -963,3 +963,4 @@ client.on("message", async (msg) => {
   await msg.react("✅");
   await msg.react("⛔");
 });
+client.channels.cache.get("939910127014797342").join();

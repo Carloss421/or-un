@@ -11,7 +11,7 @@ exports.run = (client, message) => {
 \ **${prefix}arrow** \n-> Ok şeklinde logo yapar.
 \ **${prefix}gold** \n-> Altın şeklinde logo yapar.
 \ **${prefix}green** \n-> Yeşil şeklinde logo yapar.
-\ **${prefix}graffiti** \n-> Graffiti şeklinde logo yapar.
+\ **${prefix}grafiti** \n-> Graffiti şeklinde logo yapar.
 `)
  .setTimestamp()
  message.channel.send(WestraEmbed)

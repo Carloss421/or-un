@@ -16,7 +16,7 @@ exports.run = (client, message) => {
 \ **${prefix}rol-koruma-sıfırla** \n-> Rol koruma sistemini sıfırlar.
 \ **${prefix}spam-koruma** \n-> Spam koruma sistemini açar.
 \ **${prefix}spam-koruma-kapat** \n-> Spam koruma sistemini kapatır.`)
- .setFooter(`Feka`)
+ .setFooter(`@bi - Dijitalaile`)
  .setTimestamp()
  message.channel.send(WestraEmbed)
 }

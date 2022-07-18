@@ -20,7 +20,7 @@ exports.conf = {
       };
       
     exports.help = {
-        name: 'graffiti',
+        name: 'grafiti',
         description: '',
         usage: '',
    

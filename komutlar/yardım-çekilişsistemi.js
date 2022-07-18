@@ -12,7 +12,7 @@ exports.run = (client, message) => {
 \ **${Prefix}reroll** \n-> Çekilişi yeniden çeker.
 \ **${Prefix}çekilişbitir** \n-> Çekilişi bitirir.
 `)
- .setFooter(`LumberJack Bot`)
+ .setFooter(`@bi - Dijitalaile`)
  .setTimestamp()
  message.channel.send(WestraEmbed)
 }

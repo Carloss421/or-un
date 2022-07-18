@@ -953,99 +953,13 @@ client.on("message", async (msg) => {
 
 //küfür engel son //
 
-client.on("ready", () => {
-  client.channels.cache.get("920007688295948321").join();
-});
-client.on("message", (message) => {
-  if (message.content !== "f!buton" || message.author.bot) return;
-
-  let KonserKatılımcısı = new matthe.MessageButton()
-    .setStyle("green")
-    .setLabel(" 🎤 Konser Katılımcısı")
-    .setID("EtkinlikKatılımcısı");
-
-  let ÇekilişKatılımcısı = new matthe.MessageButton()
-    .setStyle("red")
-    .setLabel("🎉 Çekiliş Katılımcısı")
-    .setID("ÇekilişKatılımcısı");
-
-  let SolistKonserKatılımcısı = new matthe.MessageButton()
-    .setStyle("blurple")
-    .setLabel("🎼 Solist Konser Katılımcısı")
-    .setID("SolistKonserKatılımcısı");
-
-  message.channel.send(
-    `
-> **Merhaba!!**
-
-> **Aşağıda bulunan butonlara tıklayarak gerekli durumlarda etiketlenecek olup bu sayede bildirim alacağınız rolü alabilirsiniz. (İstemediğinizde tekrardan butona basarak rolü bırakabilirsiniz).**
-
-Konserlerden haberdar olmak için :  🎤
-
-Çekilişlerden haberdar olmak için : 🎉
-
-Solist konserlerden haberdar olmak için: 🎼
-`,
-    {
-      buttons: [KonserKatılımcısı, ÇekilişKatılımcısı, SolistKonserKatılımcısı],
-    }
-  );
-});
-
-client.on("clickButton", async (button) => {
-  if (button.id === "KonserKatılımcısı") {
-    if (button.clicker.member.roles.cache.get(asreaper.KonserKatılımcısı)) {
-      await button.clicker.member.roles.remove(asreaper.KonserKatılımcısı);
-      await button.reply.think(true);
-      await button.reply.edit(
-        "Konser Katılımcısı rolü başarıyla üzerinizden alındı!"
-      );
-    } else {
-      await button.clicker.member.roles.add(asreaper.KonserKatılımcısı);
-      await button.reply.think(true);
-      await button.reply.edit("Konser Katılımcısı rolünü başarıyla aldınız!");
-    }
-  }
-
-  if (button.id === "ÇekilişKatılımcısı") {
-    if (button.clicker.member.roles.cache.get(asreaper.ÇekilişKatılımcısı)) {
-      await button.clicker.member.roles.remove(asreaper.ÇekilişKatılımcısı);
-      await button.reply.think(true);
-      await button.reply.edit(
-        `Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`
-      );
-    } else {
-      await button.clicker.member.roles.add(asreaper.ÇekilişKatılımcısı);
-      await button.reply.think(true);
-      await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`);
-    }
-  }
-  if (button.id === "SolistKonserKatılımcısı") {
-    if (
-      button.clicker.member.roles.cache.get(asreaper.SolistKonserKatılımcısı)
-    ) {
-      await button.clicker.member.roles.remove(
-        asreaper.SolistKonserKatılımcısı
-      );
-      await button.reply.think(true);
-      await button.reply.edit(
-        "Solist Konser Katılımcısı rolü başarıyla üzerinizden alındı!"
-      );
-    } else {
-      await button.clicker.member.roles.add(asreaper.SolistKonserKatılımcısı);
-      await button.reply.think(true);
-      await button.reply.edit(
-        "Solist Konser Katılımcısı rolünü başarıyla aldınız!"
-      );
-    }
-  }
-});
 client.on("message", async (msg) => {
-  if (msg.channel.id !== "922106933413040149") return;
+  if (msg.channel.id !== "977893951598116884") return;
   await msg.react("✅");
   await msg.react("⛔");
 });
 client.on("message", async (msg) => {
-  if (msg.channel.id !== "922146818232549416") return;
-  await msg.react("☑️");
+  if (msg.channel.id !== "950136875069366322") return;
+  await msg.react("✅");
+  await msg.react("⛔");
 });

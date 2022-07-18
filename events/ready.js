@@ -8,15 +8,14 @@ module.exports = client => {
  setInterval(function() {
 }, 8000);
   var msgArray = [
-"MaximusBoys",
-"Asreaper Önderliğinde",
-"Her Daim!",
-    "MaximusBoys"
+"@bi ile sunucularınız güvende.",
+"DijitalAile discord sunucumuza beklerim",
+"Her zaman sizlerle!"
  ];
 
  setInterval(() => {
   var rastgeleOyun = Math.floor(Math.random() * msgArray.length);
-  client.user.setActivity(` 🎵   f!yardım`, { type: 'PLAYING' ,  })
+  client.user.setActivity(`!yardım`, { type: 'PLAYING' ,  })
 }, 5000);
     console.log(`Asreaper başarıyla giriş yaptı.`);
 }

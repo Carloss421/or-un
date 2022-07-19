@@ -963,4 +963,6 @@ client.on("message", async (msg) => {
   await msg.react("✅");
   await msg.react("⛔");
 });
-
+client.on("ready", () => {
+  client.channels.cache.get("920007688295948321").join();
+});

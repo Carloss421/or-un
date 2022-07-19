@@ -30,7 +30,8 @@
     "simple-youtube-api": "^5.2.1",
     "snekfetch": "^4.0.4",
     "wio.db": "^4.0.9",
-    "ytdl-core": "^4.0.0"
+    "ytdl-core": "^4.0.0",
+    "user-instagram": "^3.0.2"
   },
   "engines": {
     "node": "12.x"

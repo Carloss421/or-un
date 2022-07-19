@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
   const westraembed = new westradiscord.MessageEmbed()
   .setColor("0x36393F")
   .setTitle(`${client.user.username} | Say Sistemi `)
-  .setFooter("Feka")
+  .setFooter("@bi - Dijitalaile ")
   .setTimestamp()
   .setDescription(`
 \Toplam üye sayısı: **${message.guild.memberCount}**

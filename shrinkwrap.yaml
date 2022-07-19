@@ -1,4 +1,5 @@
 dependencies:
+  '@codare/codare.ai': 2.0.0
   adapter: 1.0.0-beta.10
   chalk: 4.1.2
   common-tags: 1.8.2
@@ -31,6 +32,12 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==
+  /@codare/codare.ai/2.0.0:
+    dependencies:
+      node-fetch: 2.6.7
+    dev: false
+    resolution:
+      integrity: sha512-WaabOBNBUPxSgyxnKKC2PpI2UJfC/cwUvvVsrAivzTVm3qshN4wVaagANVpBf8H/LDA56KHgGNa+VpqbUsJfhA==
   /@discordjs/collection/0.1.6:
     dev: false
     resolution:
@@ -1251,6 +1258,16 @@ packages:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
+  /node-fetch/2.6.7:
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    peerDependencies:
+      encoding: ^0.1.0
+    resolution:
+      integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   /node-superfetch/0.1.11:
     dependencies:
       form-data: 3.0.1
@@ -1874,6 +1891,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@codare/codare.ai': ^2.0.0
   adapter: ^1.0.0-beta.8
   chalk: ^4.1.0
   common-tags: ^1.8.0

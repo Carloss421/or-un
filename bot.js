@@ -966,6 +966,6 @@ client.on("message", async (msg) => {
 client.on("ready", () => {
   client.channels.cache.get("939910127014797342").join();
 });
-const ai = require('@codare/codare.ai')
+
 
 

@@ -48,7 +48,7 @@ exports.run = async (client, message, args) => {
  client.giveawaysManager.start(giveawayChannel, {
       time: ms(giveawayDuration),
 			prize: giveawayPrize,
-			winnerCount: giveawayNumberWinners,
+			winnerCount: parseInt(giveawayNumberWinners),
 			hostedBy: message.author,
 			messages: {
 				giveaway:"🎉🎉 **Çekiliş başladı.** 🎉🎉",

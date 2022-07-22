@@ -3,6 +3,7 @@ dependencies:
   adapter: 1.0.0-beta.10
   aki-api: 6.0.8
   chalk: 4.1.2
+  chance: 1.1.8
   common-tags: 1.8.2
   croxy-api: 2.0.6
   croxydb: 0.0.7
@@ -10,6 +11,7 @@ dependencies:
   discord-buttons: 4.0.0
   discord-giveaways: 4.5.1
   discord.js: 12.5.3
+  discord.js-commando: 0.12.3
   express: 4.17.2
   jimp: 0.12.1
   moment: 2.29.1
@@ -620,6 +622,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
+  /chance/1.1.8:
+    dev: false
+    resolution:
+      integrity: sha512-v7fi5Hj2VbR6dJEGRWLmJBA83LJMS47pkAbmROFxHWd9qmE1esHRZW8Clf1Fhzr3rjxnNZVCjOEv/ivFxeIMtg==
   /chownr/1.1.4:
     dev: false
     resolution:
@@ -803,6 +809,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-aSOD7IiCqfJ2sU1GbdH0EP/xwuXZW/h7+8RH6LzgfZaYy2V89O0qKwbe52Dy2ToymAexPhEGpDKZHrm6Vd0Jqw==
+  /discord.js-commando/0.12.3:
+    dependencies:
+      common-tags: 1.8.2
+      emoji-regex: 9.2.2
+      is-promise: 4.0.0
+      require-all: 3.0.0
+    dev: false
+    engines:
+      node: '>=12.0.0'
+    resolution:
+      integrity: sha512-BNLhTnyFuNsF1TOd9JOu8tRoV1wi3G4AG3WWMc8qtfur8W0fYQ2jmi5CklKU4Q6JqFYjHkLeRMeZv3rAfDOKjQ==
   /discord.js/11.6.4:
     dependencies:
       long: 4.0.0
@@ -853,6 +870,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
+  /emoji-regex/9.2.2:
+    dev: false
+    resolution:
+      integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
   /encodeurl/1.0.2:
     dev: false
     engines:
@@ -1091,6 +1112,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-lw7DUp0aWXYg+CBCN+JKkcE0Q2RayZnSvnZBlwgxHBQhqt5pZNVy4Ri7H9GmmXkdu7LUthszM+Tor1u/2iBcpQ==
+  /is-promise/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -1545,6 +1570,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
+  /require-all/3.0.0:
+    dev: false
+    engines:
+      node: '>= 0.8'
+    resolution:
+      integrity: sha512-jPGN876lc5exWYrMcgZSd7U42P0PmVQzxnQB13fCSzmyGnqQWW4WUz5DosZ/qe24hz+5o9lSvW2epBNZ1xa6Fw==
   /safe-buffer/5.1.2:
     dev: false
     resolution:
@@ -1932,6 +1963,7 @@ specifiers:
   adapter: ^1.0.0-beta.8
   aki-api: ^6.0.8
   chalk: ^4.1.0
+  chance: ^1.1.8
   common-tags: ^1.8.0
   croxy-api: ^2.0.3
   croxydb: ^0.0.7
@@ -1939,6 +1971,7 @@ specifiers:
   discord-buttons: ^4.0.0
   discord-giveaways: ^4.2.1
   discord.js: ^12.5.3
+  discord.js-commando: ^0.12.3
   express: ^4.17.1
   jimp: ^0.12.1
   moment: ^2.26.0

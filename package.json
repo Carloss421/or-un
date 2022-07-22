@@ -1,9 +1,9 @@
 {
-  "//1": "Feka",
-  "//2": "Feka",
-  "name": "Feka",
+  "//1": "abi",
+  "//2": "abi",
+  "name": "abi",
   "version": "0.0.1",
-  "description": "Feka",
+  "description": "abi",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -33,7 +33,9 @@
     "ytdl-core": "^4.0.0",
     "user-instagram": "^3.0.2",
     "@codare/codare.ai": "^2.0.0",
-    "aki-api": "^6.0.8"
+    "aki-api": "^6.0.8",
+    "discord.js-commando": "^0.12.3",
+    "chance": "^1.1.8"
   },
   "engines": {
     "node": "12.x"

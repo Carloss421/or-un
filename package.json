@@ -32,7 +32,8 @@
     "wio.db": "^4.0.9",
     "ytdl-core": "^4.0.0",
     "user-instagram": "^3.0.2",
-    "@codare/codare.ai": "^2.0.0"
+    "@codare/codare.ai": "^2.0.0",
+    "aki-api": "^6.0.8"
   },
   "engines": {
     "node": "12.x"

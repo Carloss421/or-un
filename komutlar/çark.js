@@ -32,9 +32,9 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'stresçarkı',
+  name: 'çark',
   description: 'Sizin için bir stres çarkı çevirir.',
-  usage: 'stresçarkı'
+  usage: 'çarkı'
 };
 //EgSa v12 Eğlence Botu Altyapısı
 //Çalınması Yasaktır!!

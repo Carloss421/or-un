@@ -99,7 +99,7 @@ exports.run = async (client, message, args) => {
     .setDescription(`${egsacode}`)
     .addField(`Kasa Fiyatı: 500$`,  
     `Kasadan çıkan bütün ürünler sizde kalmaz sadece eğlence için yapılmış bir komutdur.`)
-    .setFooter("TR'2 Botu Altyapısı ")//alt ksım
+    .setFooter("Dijitalaile - @bi ")//alt ksım
     .setColor("RANDOM")
     .setThumbnail("https://media.discordapp.net/attachments/704352497422041168/727419534440530040/Coop_coin.gif")
     return message.channel.send(embed);

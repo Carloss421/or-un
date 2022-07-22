@@ -13,6 +13,8 @@ exports.run = (client, message) => {
 \ **öneri** \n-> Bota öneri belirtirsiniz.
 \ **istatistik** \n-> Botun istatistiğini gösterir.
 \ **sonmesaj** \n-> Yazdığınız son mesajı gösterir.
+\ **linkler** \n-> Tüm dijitalaile sosyal medya hesaplarını gösterir.
+\ **öneri** \n-> Önerilerinizi bizlere ulaştırır.
 `)
  .setTimestamp()
  message.channel.send(WestraEmbed)

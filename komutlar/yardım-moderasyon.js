@@ -26,6 +26,8 @@ exports.run = (client, message) => {
 \ **${prefix}otorol-sıfırla** \n-> Otorol sıfırlar.
 \ **${prefix}otorol-mesaj-ayarla** \n-> Otorol mesajı ayarlar.
 \ **${prefix}otorol-mesaj-sıfırla** \n-> Otorol mesajı sıfırlar.
+\ **${prefix}yetkilerim** \n-> Yetkilerinize bakarsınız.
+\ **${prefix}sunucukur** \n-> Sunucu kurarsınız.
 `)
  .setTimestamp()
  message.channel.send(WestraEmbed)

@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 exports.run = (client, message, args) => {
   
     const yenilikler = new Discord.MessageEmbed()
-    .setTitle("Rise Network İnternet Hizmetleri")
+    .setTitle("Dijitalaile")
     .setThumbnail(client.user.displayAvatarURL())
     .setColor("BLUE")
     .setDescription("**Youtube - Diji: https://youtube.com/dijitalaile \n Youtube - DijiGame : https://youtube.com/dijigame \n Discord https://discord.gg/DMgPJDNTVc **")

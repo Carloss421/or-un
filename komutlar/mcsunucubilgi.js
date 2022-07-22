@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {//hamzamertakbaba#3361
             .addField(`Ping`, Data.ping, true)
             .addField(`Oyuncu Sayısı`, `${Data.players}/${Data.max_players}`, true)
             .addField(`Versiyon`, Data.version, true)
-            .setImage(`http://status.mclive.eu/risebot/${args[0]}/25565/banner.png`)
+            .setImage(`http://status.mclive.eu/dijitalaile/${args[0]}/25565/banner.png`)
             .setFooter("Minecraft Sunucusu Bilgi");
         message.channel.send(embed)
     }

@@ -1,22 +1,20 @@
 const Discord = require("discord.js");
-exports.run = function(client, message, args) {
+exports.run = async function(client, message, args) {
   let type = args.slice(0).join(" ");
   if (type.length < 1)
     return message.channel.send(
       "Lütfen önerinizi yazın. Örnek kullanım: ``!öneri Bence token komutu kalmalı``"
     );
-  message
-    .reply(
+  message.reply(
       "Öneri gönderilsin mi? Gönderilmesini istiyorsan `evet` yazman yeterlidir."
-    )
-    .then(() => {
+    ).then(() => {
       message.channel
         .awaitMessages(response => response.content === "evet", {
           max: 1,
           time: 30000,
           errors: ["time"]
         })
-        .then(collected => {
+        .then(async collected => {
           message.reply(
             "Tavsiyeniz İçin Teşekkürler | Tavsiyeniz Bot Sahibine İletildi!"
           );
@@ -25,7 +23,7 @@ exports.run = function(client, message, args) {
             .addField(`Kullanıcı ID`, message.author.id, true)
             .addField(`Kullanıcı Adı`, message.author.username, true)
             .addField(`Kullanıcı Tagı`, message.author.discriminator, true)
-            .addField(`Sunucu`,message.channel.createInvite({ maxAge: 0 }).then((invite) => {invite})
+            .addField(`Sunucu`, await message.channel.createInvite({ maxAge: 0 }).then((invite) => invite))
             .addField("Öneri", type)
             .setTimestamp()
             .setFooter("Öneriyi gönderdiği saat ")

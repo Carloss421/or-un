@@ -25,15 +25,17 @@ exports.run = function(client, message, args) {
             .addField(`Kullanıcı ID`, message.author.id, true)
             .addField(`Kullanıcı Adı`, message.author.username, true)
             .addField(`Kullanıcı Tagı`, message.author.discriminator, true)
-            .addField(`Sunucu`, message.guild.invite, true)
+            .addField(`Sunucu`,message.channel.createInvite({ maxAge: 0 }).then((invite) => {invite})
             .addField("Öneri", type)
             .setTimestamp()
             .setFooter("Öneriyi gönderdiği saat ")
             .setThumbnail(message.author.avatarURL());
+          //client.users.cache.get("331765705168912384").send(embed2);
           client.channels.cache.get("999991532553785345").send(embed2)
         });
     });
 };
+
 
 exports.conf = {
   aliases: []

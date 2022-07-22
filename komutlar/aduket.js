@@ -1,12 +1,14 @@
 const Discord = require("discord.js");
 
 exports.run = function(client, message, args) {
-
+message.delete();
 const FwhyCode = message.mentions.users.first();
 
 if (!FwhyCode)
 
-return message.reply("**Aduket Çekeceğin Kişiyi Etiketlemelisin**").then(m => m.delete(1000));
+return message.reply("**Aduket Çekeceğin Kişiyi Etiketlemelisin**") .then(msg => {
+    setTimeout(() => msg.delete(), 5000)
+  })
 
 const EmbedFwhyCode = new Discord.MessageEmbed()
 

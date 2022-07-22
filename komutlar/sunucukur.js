@@ -29,7 +29,7 @@ exports.run = async(client, message, params) => {
      })
                     let every = message.guild.roles.cache.find(r => r.name === '@everyone')
 
-    message.author.send(`${message.author}, Merhaba! ben ${client.user.username} sunucu kurulum botuyum.*${message.guild.name}* adlı sunucuyu şuan kuruyorum. o arada destek sunucumuza gelmeyi unutma https://discord.gg/9esyTyQW9W !`)
+    message.author.send(`${message.author}, Merhaba! ben ${client.user.username} sunucu kurulum botuyum.*${message.guild.name}* adlı sunucuyu şuan kuruyorum. o arada destek sunucumuza gelmeyi unutma https://discord.gg/DMgPJDNTVc !`)
                                 message.guild.channels.create('Sunucu Hakkında', { type: 'category', reason: 'Bilgi Kanalları!' }).then(kategori => {
 
     message.guild.channels.create("📌 kurallar", "text").then(kurallar => {

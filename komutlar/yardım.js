@@ -8,7 +8,7 @@ const yardım = new Discord.MessageEmbed()
   .setThumbnail(client.user.avatarURL())
   .setDescription(`\Hey. <@${message.author.id}> beni kullandığın için teşekkür ederim.\n \  Prefixim: **!**\n \ Dilim: **TR** :flag_tr:\n`)
   .addField(" \Kategoriler:", `> \ !kullanıcı **Kullanıcı yardım menüsünü gösterir.**\n > \ !moderasyon **Moderasyon yardım menüsünü gösterir.**\n > \ !kayıtsistemi ** Kayıt sistemi yardım menüsünü gösterir.**\n > \ !korumasistemi ** Koruma sistemi yardım menüsünü gösterir.**\n > \ !logosistemi** Logo sistemi yardım menüsünü gösterir.**\n > \ !çekilişsistemi ** Çekiliş sistemi yardım menüsünü gösterir.**\n`)
-  .addField(" \Güncelleme Notları:", "**Güncelleme v0.4:** Çekiliş sistemi eklendi.")
+  .addField(" \Güncelleme Notları:", "**Güncelleme v0.5:** 23 Komutluk bir güncelleme ile birikte eğlence komutları geldi.")
 
   .setImage("")
 .setFooter("@bi - Dijitalaile", message.author.avatarURL())

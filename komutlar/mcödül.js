@@ -24,7 +24,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'mcbaşarım',
+  name: 'mcödül',
   description: 'Minecraft Başarımı Kazanırsınız.',
-  usage: 'mcbaşarım'
+  usage: 'mcödül'
 };

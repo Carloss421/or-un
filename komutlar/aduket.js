@@ -6,7 +6,7 @@ const FwhyCode = message.mentions.users.first();
 
 if (!FwhyCode)
 
-return message.reply("**Aduket Çekeceğin Kişiyi Etiketlemelisin**");
+return message.reply("**Aduket Çekeceğin Kişiyi Etiketlemelisin**").then(m => m.delete(1000));
 
 const EmbedFwhyCode = new Discord.MessageEmbed()
 
@@ -14,7 +14,7 @@ const EmbedFwhyCode = new Discord.MessageEmbed()
       `${FwhyCode} ` + `**${message.author.username}** Size Aduket Çekti`
     )
     .setImage(
-      "https://cdn.discordapp.com/attachments/747769679984066582/748464442249052251/street-fighter-60854-18102018130021.gif"
+      "https://tenor.com/view/aduket-gif-19813556"
     ) 
     .setFooter(client.user.username + " Sundu", client.user.avatarURL)
     .setTimestamp();

@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
 
     // If the member doesn't have enough permissions
     if(!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")){
-        return message.channel.send(' Çekiliş başlatman için yeterli yetkin yok! gereken yetki; `Mesajları Yönet`.');
+        return message.channel.send(' Çekiliş başlatman için yeterli yetkin yok! gereken yetki; `Mesajları Yönet` veya Giveaways adında rol.');
     }
 
     // Giveaway channel

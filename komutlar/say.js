@@ -3,7 +3,7 @@ const westradiscord = require('discord.js');
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["bilgi", "sunucubilgi", "sunucu-bilgi", "sb"],
+  aliases: ["bilgi"],
   permLevel: 0,
   kategori: "bot",
 };

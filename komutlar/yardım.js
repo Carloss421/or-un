@@ -3,7 +3,7 @@ const client = new Discord.Client()
 const db = require('quick.db')
 exports.run = (client, message, args, member) => {
 const yardım = new Discord.MessageEmbed()
-  .setAuthor(`Moderasyon Yardım Menusü`, client.user.avatarURL())
+  .setAuthor(`@bi Yardım Menusü`, client.user.avatarURL())
   .setColor("0x36393F")
   .setThumbnail(client.user.avatarURL())
   .setDescription(`\Hey. <@${message.author.id}> beni kullandığın için teşekkür ederim.\n \  Prefixim: **!**\n \ Dilim: **TR** :flag_tr:\n`)

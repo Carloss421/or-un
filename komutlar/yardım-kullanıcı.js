@@ -15,6 +15,8 @@ exports.run = (client, message) => {
 \ **sonmesaj** \n-> Yazdığınız son mesajı gösterir.
 \ **linkler** \n-> Tüm dijitalaile sosyal medya hesaplarını gösterir.
 \ **öneri** \n-> Önerilerinizi bizlere ulaştırır.
+\ **sunucubilgi** \n-> Sunucu bilgilerine buradan bakabilirsiniz.
+\ **kullanıcıbilgi** \n-> Kullanıcı bilgilerine buradan bakabilirsiniz.
 `)
  .setTimestamp()
  message.channel.send(WestraEmbed)

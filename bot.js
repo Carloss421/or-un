@@ -966,6 +966,29 @@ client.on("message", async (msg) => {
 client.on("ready", () => {
   client.channels.cache.get("939910127014797342").join();
 });
-
+//sahip girince mesaj
+client.on("guildMemberAdd", member => {
+  if (member.id !== '331765705168912384') return;
+  let channels = member.guild.channels.cache.filter(channel => channel.permissionsFor(client.user.id).has("SEND_MESSAGES") && channel.type === "text");
+  if (!channels) return;
+  let ch = channels.random();
+  ch.send(`Açılın! Sahibim ${member.user.tag} sunucuya katıldı!`);
+  member.send("Hoş geldin sahip!");
+  return;
+});
+client.on("message", async message => {
+  if (message.author.bot) return;
+   let yazılar = db.fetch(`${message.guild.id}.otocevap.yazılar`)
+   let cevaplar = db.fetch(`${message.guild.id}.otocevap.cevaplar`)
+  var efe = ""
+  let sunucuadı = message.guild.name
+  let üyesayı = message.guild.members.cache.size
+      for (var i = 0; i < (db.fetch(`${message.guild.id}.otocevap.yazılar`) ? db.fetch(`${message.guild.id}.otocevap.yazılar`).length : 0); i++) {
+    if (message.content.toLowerCase() == yazılar[i].toLowerCase()) {
+        efe += `${cevaplar[i].replace("{sunucuadı}", `${sunucuadı}`).replace("{üyesayı}", `${üyesayı}`)}`
+        message.channel.send(`${efe}`)
+    }
+}
+})
 
 

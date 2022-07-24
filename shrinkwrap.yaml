@@ -13,6 +13,7 @@ dependencies:
   discord.js: 12.5.3
   discord.js-commando: 0.12.3
   express: 4.17.2
+  film-apisi: 1.0.0
   jimp: 0.12.1
   moment: 2.29.1
   moment-duration-format: 2.3.2
@@ -1039,6 +1040,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
+  /film-apisi/1.0.0:
+    dependencies:
+      node-fetch: 2.6.7
+    dev: false
+    resolution:
+      integrity: sha512-ZpNvuu6cIkdHI8E5TGP+c1phUNELMiSTGWyDa65l2My2s/VA6z5aCP29Rv1lN5aPeqE9pGhmRHQK9e5MINv1jA==
   /finalhandler/1.1.2:
     dependencies:
       debug: 2.6.9
@@ -2087,6 +2094,7 @@ specifiers:
   discord.js: ^12.5.3
   discord.js-commando: ^0.12.3
   express: ^4.17.1
+  film-apisi: ^1.0.0
   jimp: ^0.12.1
   moment: ^2.26.0
   moment-duration-format: ^2.3.2

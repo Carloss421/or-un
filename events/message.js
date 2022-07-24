@@ -16,6 +16,7 @@ module.exports = message => {
   } else if (client.aliases.has(command)) {
     cmd = client.commands.get(client.aliases.get(command));
   }
+  
   if (cmd) {
     
     let karaliste = db.fetch(`karalist_${message.author.id}`, "aktif")

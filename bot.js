@@ -966,6 +966,12 @@ client.on("message", async (msg) => {
 client.on("ready", () => {
   client.channels.cache.get("939910127014797342").join();
 });
-
+client.on("message",message=>{
+   if(!message.author.bot){
+    if(message.content==db.get(`${message.guild.id}özelkismi`)){
+      return message.channel.send(db.get(`${message.guild.id}özelkyazi`))
+    }
+   }
+  })
 
 

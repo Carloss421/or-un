@@ -976,19 +976,32 @@ client.on("guildMemberAdd", member => {
   member.send("Hoş geldin sahip!");
   return;
 });
-client.on("message", async message => {
-  if (message.author.bot) return;
-   let yazılar = db.fetch(`${message.guild.id}.otocevap.yazılar`)
-   let cevaplar = db.fetch(`${message.guild.id}.otocevap.cevaplar`)
-  var efe = ""
-  let sunucuadı = message.guild.name
-  let üyesayı = message.guild.members.cache.size
-      for (var i = 0; i < (db.fetch(`${message.guild.id}.otocevap.yazılar`) ? db.fetch(`${message.guild.id}.otocevap.yazılar`).length : 0); i++) {
-    if (message.content.toLowerCase() == yazılar[i].toLowerCase()) {
-        efe += `${cevaplar[i].replace("{sunucuadı}", `${sunucuadı}`).replace("{üyesayı}", `${üyesayı}`)}`
-        message.channel.send(`${efe}`)
-    }
-}
-})
+client.on("message" , async msg => {
+  
+  if(!msg.guild) return;
+  let afk = msg.mentions.users.first()
+  
+  const kisi = db.fetch(`afkid_${msg.author.id}_${msg.guild.id}`)
+  
+  const isim = db.fetch(`afkAd_${msg.author.id}_${msg.guild.id}`)
+ if(afk){
+   const sebep = db.fetch(`afkSebep_${afk.id}_${msg.guild.id}`)
+   const kisi3 = db.fetch(`afkid_${afk.id}_${msg.guild.id}`)
+   if(msg.content.includes(kisi3)){
+
+       msg.reply(`Etiketlediğiniz Kişi Afk \nSebep : ${sebep}`)
+   }
+ }
+  if(msg.author.id === kisi){
+
+       msg.reply(`Afk'lıktan Çıktınız`)
+   db.delete(`afkSebep_${msg.author.id}_${msg.guild.id}`)
+   db.delete(`afkid_${msg.author.id}_${msg.guild.id}`)
+   db.delete(`afkAd_${msg.author.id}_${msg.guild.id}`)
+    msg.member.setNickname(isim)
+    
+  }
+  
+});
 
 

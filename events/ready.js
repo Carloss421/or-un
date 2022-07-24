@@ -20,6 +20,7 @@ module.exports = client => {
 
         var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
 
-        client.user.setActivity()(oyun[random], "https://twitch.tv/dijitalailee");
+        client.user.setActivity("Dijitalaile", { url: "https://twitch.tv/dijitalailee", type: 'STREAMING' })
+  
         }, 2 * 2500);
 }

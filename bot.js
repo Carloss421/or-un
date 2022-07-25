@@ -1015,48 +1015,6 @@ client.on("guildCreate", guild => {
     let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
     channel.send(`Merhaba ben @bi. Dijitalaile'nin bir üyesi olmak için https://discord.gg/DMgPJDNTVc sunucusuna gelebilirsiniz. Ayrıca tüm öneri ve şikayetleri discord sunucumuzdan yapabilir Yapımcım: Niyazi Çiftçi#8391'ye discord sunucumuzdan ulaşabilirsiniz.`);
 });
-client.on('message', async message => {
-  const ms = require('ms');
-  const prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  let u = message.mentions.users.first() || message.author;
-  if (command === "özelodasistemi") {
-  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Zaten kurulu.")
-  if (!message.member.hasPermission('ADMINISTRATOR'))
-  return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
-    message.channel.send(`Özel Oda Sistemi Kuruluyor`)
-    .then((collected) => {
-
-message.guild.createChannel('2 Kişilik Odalar', 'category', [{
-  id: message.guild.id,
-}]);
-
-message.guild.createChannel(`➕│2 Kişilik Oda`, 'voice')
-.then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "2 Kişilik Odalar")))
-
-message.guild.createChannel('3 Kişilik Odalar ', 'category', [{
-  id: message.guild.id,
-}]);
-
-message.guild.createChannel(`➕│3 Kişilik Oda`, 'voice')
-.then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "3 Kişilik Odalar ")))
-
-message.guild.createChannel('4 Kişilik Odalar', 'category', [{
-  id: message.guild.id,
-}]);
-
-message.guild.createChannel(`➕│4 Kişilik Oda`, 'voice')
-.then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "4 Kişilik Odalar ")))
-
-
-            })
- 
-}
-});
 client.on('voiceStateUpdate', (oldMember, newMember) => {
     // todo create channel
     if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│2 Kişilik Oda')) {
@@ -1083,7 +1041,8 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
         }
     }
 });
-
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
     // todo create channel
     if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│3 Kişilik Oda')) {
@@ -1110,7 +1069,8 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
         }
     }
 });
-
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
     // todo create channel
     if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│4 Kişilik Oda')) {
@@ -1137,3 +1097,77 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
         }
     }
 });
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│5 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(5)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------Özel oda sistemi----------------------------// 
+client.on('message', async message => {
+  const ms = require('ms');
+  const prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  let u = message.mentions.users.first() || message.author;
+  if (command === "özelodasistemi") {
+  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
+  if (!message.member.hasPermission('ADMINISTRATOR'))
+  return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
+    message.channel.send(`Özel Oda Sisteminin Kurulmasını İstiyorsanız **Kur** Yazınız.`)
+      message.channel.awaitMessages(response => response.content === 'Kur', {
+        max: 1,
+        time: 10000,
+        errors: ['time'],
+     })
+    .then((collected) => {
+
+message.guild.createChannel('【🔐】Özel Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+message.guild.createChannel(`➕│2 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "🔐】Özel Odalar【🔐】")))
+
+message.guild.createChannel(`➕│3 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "🔐】Özel Odalar【🔐】")))
+
+message.guild.createChannel(`➕│4 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "🔐】Özel Odalar【🔐】")))
+        
+message.guild.createChannel(`➕│5 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "🔐】Özel Odalar【🔐】")))
+
+       message.channel.send("Gelişmiş Özel Oda Sistemi Aktif!")
+     
+            })   
+      
+}
+});
+//----------------------------------Özel oda sistemi Son----------------------------// 

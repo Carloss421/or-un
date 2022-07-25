@@ -995,5 +995,24 @@ dm.send(botdm)
 }
 if(msg.channel.bot) return;
 });
+client.on("message",message=>{
 
+if(message.content==`<@!${client.user.id}>`) return message.channel.send(`Biri benden bahsetmiş. Beni kullanabilmem için prefixim **<prefix>**`);
+})
+client.on("guildCreate", guild => {
+    let channelID;
+    let channels = guild.channels.cache;
+
+    channelLoop:
+    for (let key in channels) {
+        let c = channels[key];
+        if (c[1].type === "text") {
+            channelID = c[0];
+            break channelLoop;
+        }
+    }
+
+    let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
+    channel.send(`Merhaba ben @bi. Dijitalaile'nin bir üyesi olmak için https://discord.gg/DMgPJDNTVc sunucusuna gelebilirsiniz. Ayrıca tüm öneri ve şikayetleri discord sunucumuzdan yapabilir Yapımcım: Niyazi Çiftçi#8391'ye discord sunucumuzdan ulaşabilirsiniz.`);
+});
 

@@ -16,14 +16,14 @@ exports.run = (client, message, args) => {
 
     if (!user) return message.reply('**Kime rol verileceğini yazmadın!**').catch(console.error);
     if (!rol) return message.reply('**Rolü belirtmedin**');
-    user.user.roles.add(rol);
+    user.roles.add(rol);
 
     const embed = new Discord.MessageEmbed()
         .setDescription(`${user} kullanıcısına başarıyla ${rol} rolü verildi!`)
         .setFooter('Dijitalaile - @bi', client.user.avatarURL)
         .setColor("RANDOM")
         .setTimestamp()
-    message.channel.send({ embed })
+    message.channel.send(embed)
 };
 
 exports.conf = {

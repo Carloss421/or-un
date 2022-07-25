@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
 
     if (!user) return message.reply('**Kimden rol alınacağını yazmadın!**').catch(console.error);
     if (!rol) return message.reply('**Rolü belirtmedin**');
-    user.user.roles.remove(rol);
+    user.roles.remove(rol);
 
     const embed = new Discord.MessageEmbed()
         .setDescription(`${user} kullanıcısından başarıyla ${rol} rolü alındı!`)

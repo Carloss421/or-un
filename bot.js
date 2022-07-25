@@ -1135,7 +1135,7 @@ client.on('message', async message => {
   const command = args.shift().toLowerCase();
   let u = message.mentions.users.first() || message.author;
   if (command === "özelodasistemi") {
-  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
+  if (message.guild.channels.cache.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
   if (!message.member.hasPermission('ADMINISTRATOR'))
   return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
     message.channel.send(`Özel Oda Sisteminin Kurulmasını İstiyorsanız **Kur** Yazınız.`)
@@ -1152,30 +1152,30 @@ message.guild.channels.create('【🔐】2 Kişilik Odalar【🔐】', 'category
 
 message.guild.channels.create(`➕│2 Kişilik Oda`, 'voice')
 .then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】2 Kişilik Odalar【🔐】")))
+      channel.setParent(message.guild.channels.cache.find(channel => channel.name === "【🔐】2 Kişilik Odalar【🔐】")))
 
-messageguild.channels.create('【🔐】3 Kişilik Odalar【🔐】', 'category', [{
+message.guild.channels.create('【🔐】3 Kişilik Odalar【🔐】', 'category', [{
   id: message.guild.id,
 }]);
 
-message.guild.createChannel(`➕│3 Kişilik Oda`, 'voice')
+message.guild.channels.create(`➕│3 Kişilik Oda`, 'voice')
 .then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】3 Kişilik Odalar【🔐】")))
+      channel.setParent(message.guild.channels.cache.find(channel => channel.name === "【🔐】3 Kişilik Odalar【🔐】")))
 
-message.guild.createChannel('【🔐】4 Kişilik Odalar【🔐】', 'category', [{
+message.guild.channels.create('【🔐】4 Kişilik Odalar【🔐】', 'category', [{
   id: message.guild.id,
 }]);
 
-message.guild.createChannel(`➕│4 Kişilik Oda`, 'voice')
+message.guild.channels.create(`➕│4 Kişilik Oda`, 'voice')
 .then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】4 Kişilik Odalar【🔐】")))
+      channel.setParent(message.guild.channels.cache.find(channel => channel.name === "【🔐】4 Kişilik Odalar【🔐】")))
 
-message.guild.createChannel('【🔐】5 Kişilik Odalar【🔐】', 'category', [{
+message.guild.channels.create('【🔐】5 Kişilik Odalar【🔐】', 'category', [{
   id: message.guild.id,
 }]);
-message.guild.createChannel(`➕│5 Kişilik Oda`, 'voice')
+message.guild.channels.create(`➕│5 Kişilik Oda`, 'voice')
 .then(channel =>
-      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】5 Kişilik Odalar【🔐】")))
+      channel.setParent(message.guild.channels.cache.find(channel => channel.name === "【🔐】5 Kişilik Odalar【🔐】")))
 
        message.channel.send("Gelişmiş Özel Oda Sistemi Aktif!")
      

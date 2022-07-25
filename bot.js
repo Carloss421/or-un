@@ -1129,12 +1129,13 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 //----------------------------------Özel oda sistemi----------------------------// 
 client.on('message', async message => {
   const ms = require('ms');
+  const ayarlar = require("./ayarlar.json")
   const prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   let u = message.mentions.users.first() || message.author;
   if (command === "özelodasistemi") {
-  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
+  if (message.guild.channels.cache.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
   if (!message.member.hasPermission('ADMINISTRATOR'))
   return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
     message.channel.send(`Özel Oda Sisteminin Kurulmasını İstiyorsanız **Kur** Yazınız.`)
@@ -1145,7 +1146,7 @@ client.on('message', async message => {
      })
     .then((collected) => {
 
-message.guild.createChannel('【🔐】Özel Odalar【🔐】', 'category', [{
+message.guild.channels.create('【🔐】Özel Odalar【🔐】', 'category', [{
   id: message.guild.id,
 }]);
 message.guild.createChannel(`➕│2 Kişilik Oda`, 'voice')

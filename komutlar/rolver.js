@@ -14,10 +14,10 @@ exports.run = (client, message, args) => {
   let user = message.mentions.members.first() 
 
   if (!user) return message.reply('**Kime Rol Verceğimi Yazmadın!**').catch(console.error);
-  if (rol.length < 1) return message.reply('**Rolü belirtmedin**');
-user.addRole(rol);
+  if(!rol)
+  user.roles.add
   
-   const embed = new Discord.RichEmbed()
+   const embed = new Discord.MessageEmbed()
         .setDescription(`${user} kullanıcısına başarıyla ${rol} rolü verildi!`)
         .setFooter('Dijitalaile - @bi', client.user.avatarURL)
         .setColor("RANDOM")

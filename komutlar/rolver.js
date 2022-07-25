@@ -14,8 +14,8 @@ exports.run = (client, message, args) => {
     let rol = message.mentions.roles.first() || message.guild.roles.cache.get(args[0])
     let user = message.mentions.members.first()
 
-    if (!user) return message.reply('**Kime rol verileceğini yazmadın!**').catch(console.error);
     if (!rol) return message.reply('**Rolü belirtmedin**');
+    if (!user) return message.reply('**Kime rol verileceğini yazmadın!**').catch(console.error);
     user.roles.add(rol);
 
     const embed = new Discord.MessageEmbed()
@@ -36,5 +36,5 @@ exports.conf = {
 exports.help = {
     name: 'rol-ver',
     description: 'İstediğiniz kişiye istediğiniz rolü verir.',
-    usage: 'rol-ver [kullanıcı] [@rol]'
+    usage: 'rol-ver [@rol] [kullanıcı]'
 };

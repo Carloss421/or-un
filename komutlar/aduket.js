@@ -16,7 +16,7 @@ const EmbedFwhyCode = new Discord.MessageEmbed()
       `${FwhyCode} ` + `**${message.author.username}** Size Aduket Çekti`
     )
     .setImage(
-      "https://tenor.com/view/aduket-gif-19813556"
+      "https://korkubilimi.com/wp-content/uploads/2017/12/aduket-e1514309463438.jpg"
     ) 
     .setFooter(client.user.username + " Sundu", client.user.avatarURL)
     .setTimestamp();

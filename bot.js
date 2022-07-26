@@ -1137,52 +1137,22 @@ client.on("guildMemberAdd", async member => {
   if (member.user.bot)
     return canvaskanal.send(`🤖 Bu bir bot, ${member.user.tag}`);
 });
-client.on("message", async msg => {
-
-  let saas = await db.fetch(`saas_${msg.guild.id}`);
-
-  if (saas == 'kapali') return;
-
-  if (saas == 'acik') {
-
-  if (msg.content.toLowerCase() === 'sa') {
-
-    msg.reply('Aleyküm selam hoşgeldin adamım.');
-
+client.on("message", async (msg, member, guild) => {
+  let i = await db.fetch(`saas_${msg.guild.id}`);
+  if (i === "açık") {
+    if (msg.content.toLowerCase() === "sa") {
+      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+    }
+    if (msg.content.toLowerCase() === "Sa") {
+      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+    }
+    if (msg.content.toLowerCase() === "selam") {
+      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+    }
+    if (msg.content.toLowerCase() === "Selam") {
+      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+    }
   }
-    if (msg.content.toLowerCase() === 'Sa') {
-
-    msg.reply('Aleyküm selam hoşgeldin adamım.');
-
-  }
-    if (msg.content.toLowerCase() === 'selam') {
-
-    msg.reply('Aleyküm selam hoşgeldin adamım.');
-
-  }
-    if (msg.content.toLowerCase() === 'Selam') {
-
-    msg.reply('Aleyküm selam hoşgeldin adamım.');
-
-  }
-
-  }
-
-});
-client.on('messageDelete', async message => {// can#0002
-  if(message.author.bot || !message.content) return;
-  require('quick.db').push(message.guild.id, {
-    author: message.author,
-    authorTAG: message.author.tag,
-    authorID: message.author.id,
-    authorUSERNAME: message.author.username,
-    authorDISCRIMINATOR: message.author.discriminator,
-    messageID: message.id,
-    messageCHANNEL: message.channel,
-    messageCHANNELID: message.channel.id,
-    messageCONTENT: message.content,
-    messageCREATEDAT: message.createdAt
-  });
 });
 client.on('messageDelete', message => {
   db.set(`snipe.mesaj.${message.guild.id}`, message.content)

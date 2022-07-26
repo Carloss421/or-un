@@ -4,10 +4,10 @@ exports.run = (client, message, args) => {
   const db = require("quick.db");
 
   let member = message.guild.member(
-    message.mentions.users.array()[0] || message.guild.members.get(args[0])
+    message.mentions.users.array()[0] || message.guild.members.cache.get(args[0])
   );
   let member2 = message.guild.member(
-    message.mentions.users.array()[1] || message.guild.members.get(args[1])
+    message.mentions.users.array()[1] || message.guild.members.cache.get(args[1])
   );
   var s = message.author;
   if (member2) {
@@ -50,7 +50,7 @@ exports.run = (client, message, args) => {
   if (anasonuc < 20) {
     var yorum = "Bu iş olmaz sen bunu unut.";
   }
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setAuthor(`${member.user.tag} ve ${s.tag}`)
     .setDescription(
       `Aşk yüzdesi **%${anasonuc}**! \n${kalp}${akalp} \n\n${yorum}`
@@ -68,7 +68,7 @@ exports.conf = {
   category: "fun"
 };
 exports.help = {
-  name: "aşk-ölçer",
+  name: "aşkölç",
   description: "İki kullanıcı arasındaki aşkı ölçer.",
-  usage: "aşk-ölçer <@kullanıcı> veya aşk-ölçer <@kullanıcı> <@kullanıcı>"
+  usage: "aşkölç <@kullanıcı> veya aşk-ölçer <@kullanıcı> <@kullanıcı>"
 };

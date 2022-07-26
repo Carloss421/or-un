@@ -21,5 +21,5 @@ exports.conf = {
   aliases: []
 };
 exports.help = {
-  name: "fake-mesaj"
+  name: "fakemesaj"
 };

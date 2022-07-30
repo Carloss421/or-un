@@ -4,7 +4,7 @@ const db = require('quick.db')
 exports.run = async (client, message, args) => {
     const data = await db.fetch(`snipe.id.${message.guild.id}`)
     if(!data) {
-    const snipe2 = new Discord.RichEmbed()
+    const snipe2 = new Discord.MessageEmbed()
   .setAuthor(client.user.username, client.user.avatarURL)
   .setDescription(`Hiç mesaj silinmemiş.`)
 .setColor(`#f3c7e1`)

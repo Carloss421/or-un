@@ -28,7 +28,7 @@ exports.run = async (client, message, args) => {
         return message.channel.send(' Kaç kişi kazanıcak?');
     }
   
-  if(giveawayNumberWinners > 20){
+  if(giveawayNumberWinners > 1){
     return message.channel.send(" Çekiliş kazanan sayısı 20'den üstün olamaz!")
   }
      let giveaway = 

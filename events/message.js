@@ -1,8 +1,6 @@
 const Discord = require("discord.js")
 const ayarlar = require("../ayarlar.json")
-const { Database } = require("wio.db")
-const qdb = new Database({ dataPath: "./database.json" })
-const db = require("wio.db")
+const db = require("quick.db")
 module.exports = message => {
   let client = message.client;
   if (message.author.bot) return;

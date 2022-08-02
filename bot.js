@@ -544,44 +544,6 @@ client.on("messageUpdate", async (oldMessage, newMessage) => {
   client.channels.cache.get(modlog).send(embed);
 });
 
-client.on("channelCreate", async (channel) => {
-  let modlog = await db.fetch(`log_${channel.guild.id}`);
-
-  if (!modlog) return;
-
-  const entry = await channel.guild
-    .fetchAuditLogs({ type: "CHANNEL_CREATE" })
-    .then((audit) => audit.entries.first());
-
-  let kanal;
-
-  if (channel.type === "text") kanal = `<#${channel.id}>`;
-
-  if (channel.type === "voice") kanal = `\`${channel.name}\``;
-
-  let embed = new Discord.MessageEmbed()
-
-    .setAuthor(entry.executor.username, entry.executor.avatarURL())
-
-    .addField("**Eylem:**", "Kanal Oluşturma")
-
-    .addField("**Kanalı Oluşturan Kişi:**", `<@${entry.executor.id}>`)
-
-    .addField("**Oluşturduğu Kanal:**", `${kanal}`)
-
-    .setTimestamp()
-
-    .setColor(0x36393f)
-
-    .setFooter(
-      `Sunucu: ${channel.guild.name} - ${channel.guild.id}`,
-      channel.guild.iconURL()
-    )
-
-    .setThumbnail(channel.guild.iconUR);
-
-  client.channels.cache.get(modlog).send(embed);
-});
 
 client.on("channelDelete", async (channel) => {
   let modlog = await db.fetch(`log_${channel.guild.id}`);

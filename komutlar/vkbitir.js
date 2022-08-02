@@ -3,9 +3,9 @@ const qdb = require("wio.db");
 
 exports.run = async (client, message, args) => {
 	if (!message.guild) return
-	  let db2 = new qdb.table("prefix");
-      let db3 = new qdb.table("sunucuayar");
-      let db = new qdb.table("vampirkoylu")
+	  let db2 = new db.table("prefix");
+      let db3 = new db.table("sunucuayar");
+      let db = new db.table("vampirkoylu")
     let prefix = await db2.get(`prefix`) || client.ayarlar.prefix
     const vkyonetici = await db3.get(`sunucuayar.vkyonetici`)
     if (!message.member.roles.cache.has(vkyonetici)) return message.channel.send("Oyun Yöneticisi Değilsin.")

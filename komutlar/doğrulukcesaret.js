@@ -12,7 +12,7 @@ if(!kanal) return message.reply("Sesli kanala gir!")
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ["dc"],
   permLevel: 0
 };
 exports.help = {

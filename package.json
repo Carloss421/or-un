@@ -39,7 +39,8 @@
     "steam-provider": "^0.3.2",
     "film-apisi": "^1.0.0",
     "weather-js": "^2.0.0",
-    "generate-password": "^1.7.0"
+    "generate-password": "^1.7.0",
+    "gamecord-fork": "^1.0.12"
   },
   "engines": {
     "node": "12.x"

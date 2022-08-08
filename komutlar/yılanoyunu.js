@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const GameCord = require("gamecord-fork").djs;
 
 const db = require("quick.db");
-const a = require("../../ayarlar.json")
+const a = require("../ayarlar.json")
 const cd = new Set();
 
 exports.run = async (client, message, args) => {

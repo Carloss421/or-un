@@ -14,6 +14,7 @@ dependencies:
   discord.js-commando: 0.12.3
   express: 4.17.2
   film-apisi: 1.0.0
+  gamecord-fork: 1.0.12
   generate-password: 1.7.0
   jimp: 0.12.1
   moment: 2.29.1
@@ -1198,6 +1199,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==
+  /gamecord-fork/1.0.12:
+    dev: false
+    resolution:
+      integrity: sha512-H1SYHbB/Gb5OwO8vBF5vgT/2E9Bb6hVC93Mn/3mnXycEZFt9udzhz/nfVXwxIWuV2t+1FgVLXkFKNICeCzMd7Q==
   /gauge/2.7.4:
     dependencies:
       aproba: 1.2.0
@@ -2390,6 +2395,7 @@ specifiers:
   discord.js-commando: ^0.12.3
   express: ^4.17.1
   film-apisi: ^1.0.0
+  gamecord-fork: ^1.0.12
   generate-password: ^1.7.0
   jimp: ^0.12.1
   moment: ^2.26.0

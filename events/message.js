@@ -47,15 +47,15 @@ module.exports = message => {
        
        
     //wqerewq
-   if (cmd.conf.enabled === false) {
-      if (!ayarlar.sahip.includes(message.author.id) && !ayarlar.sahip.includes(message.author.id)) {
-        const embed = new Discord.MessageEmbed()
-                    .setDescription(` **${cmd.help.name}** isimli komut şuanda geçici olarak kullanıma kapalıdır!`)
-                    .setColor("RED")
-                message.channel.send({embed})
-                return
-      }
-    }
+ //  if (cmd.conf.enabled === false) {
+   //   if (!ayarlar.sahip.includes(message.author.id) && !ayarlar.sahip.includes(message.author.id)) {
+     //   const embed = new Discord.MessageEmbed()
+       //             .setDescription(` **${cmd.help.name}** isimli komut şuanda geçici olarak kullanıma kapalıdır!`)
+         //           .setColor("RED")
+           //     message.channel.send({embed})
+             //   return
+      //}
+    //}
 
     if (cmd.conf.permLevel === 1) {
 			if (!message.member.hasPermission("MANAGE_MESSAGES")) {

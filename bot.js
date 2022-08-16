@@ -452,6 +452,7 @@ client.on("message", async (message) => {
     let randomgif = [
       "",
     ];
+  
 
     ///////////////////
     const embed = new Discord.MessageEmbed()

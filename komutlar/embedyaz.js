@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
  let mesaj = args.slice(0).join(' ');
-if (mesaj.length < 1) return message.reply('bişey yaz moruq.');
+if (mesaj.length < 1) return message.reply('Bir şey yazmalısın.');
    const yaz = new Discord.MessageEmbed()
-      .setColor('#fff000')
-      .addField(`Mesajın Moruq`, `${mesaj}`)
-    return message.channel.sendEmbed(yaz);
+      .setColor('RANDOM')
+      .addField(`İşte Mesajın`, `${mesaj}`)
+    return message.channel.send(yaz);
 };
  exports.conf = {
   enabled: true,

@@ -14,7 +14,7 @@ exports.run = function(client, message, args) {
         numbers: true,
     })
 
-    message.author.sent(`'Oluşturduğun Şifre' ${password}`);
+    message.author.send(`**Oluşturduğun Şifre:** ${password}`);
 };  
 //codare
 exports.conf = {

@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
   .setTitle('@bi Yardım menüsü')
   .addField(`Komutlar`, `Alttaki butonlara basarak tüm komutları öğrenebilirsiniz.`)
   .setDescription(`Dijitalaile - @bi`)
-  message.channel.send(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),new MessageButton().setStyle('blurple').setLabel('Logo Sistemi').setID('6'),new MessageButton().setStyle('blurple').setLabel('Çekiliş Sistemi').setID('7'),  buttonDelete]}).then(async function(helpMessage) {
+  message.channel.send(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),  buttonDelete]}).then(async function(helpMessage) {
 
     helpMessage.createButtonCollector(user => user.clicker.user.id == message.author.id).on('collect', async (button) => {
 
@@ -41,7 +41,7 @@ exports.run = async (client, message, args) => {
 
         embed.setTitle('Sayfa 2')
         embed.setDescription(`Sayfa 2`)
-        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),new MessageButton().setStyle('blurple').setLabel('Logo Sistemi').setID('6'),new MessageButton().setStyle('blurple').setLabel('Çekiliş Sistemi').setID('7'),  buttonDelete]})
+        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),  buttonDelete]})
 
         button.reply.defer()
 
@@ -49,22 +49,20 @@ exports.run = async (client, message, args) => {
 
         embed.setTitle('Sayfa 3')
         embed.setDescription(`Sayfa 3`)
-        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),new MessageButton().setStyle('blurple').setLabel('Logo Sistemi').setID('6'),new MessageButton().setStyle('blurple').setLabel('Çekiliş Sistemi').setID('7'),  buttonDelete]})
+        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),  buttonDelete]})
 
         button.reply.defer()
       } else if (button.id == '4') {
 
         embed.setTitle('Sayfa 4')
         embed.setDescription(`Sayfa 4`)
-        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),new MessageButton().setStyle('blurple').setLabel('Logo Sistemi').setID('6'),new MessageButton().setStyle('blurple').setLabel('Çekiliş Sistemi').setID('7'),  buttonDelete]})
-
+        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),  buttonDelete]})
         button.reply.defer()
-        } else if (button.id == '3') {
+        } else if (button.id == '4') {
 
-        embed.setTitle('Sayfa 3')
-        embed.setDescription(`Sayfa 3`)
-        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),new MessageButton().setStyle('blurple').setLabel('Logo Sistemi').setID('6'),new MessageButton().setStyle('blurple').setLabel('Çekiliş Sistemi').setID('7'),  buttonDelete]})
-
+        embed.setTitle('Sayfa 5')
+        embed.setDescription(`Sayfa 5`)
+        helpMessage.edit(embed, {buttons: [new MessageButton().setStyle('green').setLabel('Kullanıcı').setID('1'), new MessageButton().setStyle('blurple').setLabel('Moderasyon').setID('2'), new MessageButton().setStyle('blurple').setLabel('Kayıt Sistemi').setID('3'),new MessageButton().setStyle('blurple').setLabel('Eğlence').setID('4'),new MessageButton().setStyle('blurple').setLabel('Koruma Sistemi').setID('5'),  buttonDelete]})
         button.reply.defer()
       };
     });

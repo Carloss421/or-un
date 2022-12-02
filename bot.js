@@ -19,7 +19,7 @@ const http = require("http");
 const express = require("express");
 const app = express();
 app.get("/", (request, response) => {
-  console.log("LumberJack pinglendi.");
+  console.log("Kayser-i Rum pinglendi.");
   response.sendStatus(200);
 });
 //app.listen(8000);

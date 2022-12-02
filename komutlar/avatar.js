@@ -11,7 +11,7 @@ const embed = new Discord.MessageEmbed()
 .setImage(user.displayAvatarURL({dynamic:true})) 
 .setTimestamp()
 .setColor(`BLUE`)
-.setFooter(`Feka`)
+.setFooter(`Kayser-i Rum`)
 message.channel.send(embed)
  } else {
   const embed = new Discord.MessageEmbed()

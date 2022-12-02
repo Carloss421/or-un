@@ -2,10 +2,10 @@ const Discord = require('discord.js')
 exports.run = (client, message, args) => {
   
     const yenilikler = new Discord.MessageEmbed()
-    .setTitle("Dijitalaile")
+    .setTitle("Kayser-i Rum")
     .setThumbnail(client.user.displayAvatarURL())
     .setColor("BLUE")
-    .setDescription("**Youtube - Diji: https://youtube.com/dijitalaile \n Youtube - DijiGame : https://youtube.com/dijigame \n Discord https://discord.gg/DMgPJDNTVc **")
+    .setDescription("**Youtube - Kayzer: https://www.youtube.com/@KayseriRum \n TikTok - KayzerTurco : https://www.tiktok.com/@kayzerturco \n Discord: https://discord.gg/QzgN3nJ2PG **")
     .setTimestamp()
     message.channel.send(yenilikler) 
   

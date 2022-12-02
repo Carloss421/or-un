@@ -6,7 +6,7 @@ const Discord = require('discord.js')
             const CodeMareFi = new Discord.MessageEmbed()
             .setDescription(`Bu komudu kullanmak için gerekli yetkilere sahip olman gerek.`)
             .setColor('BLACK')
-            .setFooter('Dijitalaile - @bi')
+            .setFooter('Kayser-i Rum')
             return message.channel.send(CodeMareFi)
         }
 
@@ -22,20 +22,20 @@ const Discord = require('discord.js')
             const CodeMareFi = new Discord.MessageEmbed()
             .setDescription(`${message.author} - **Lütfen Kullanıcı Belirt**`)
             .setColor('BLACK')
-            .setFooter('Dijitalaile - @bi')
+            .setFooter('Kayser-i Rum')
             return message.channel.send(CodeMareFi)
         } else if(isNaN(kullanıcı)){
             const CodeMareFi = new Discord.MessageEmbed()
             .setDescription(`${message.author} - **Lütfen Geçerli Kullanıcı Belirt**`)
             .setColor('BLACK')
-            .setFooter('Dijitalaile - @bi')
+            .setFooter('Kayser-i Rum')
             return message.channel.send(CodeMareFi)
         }
         if(!sebep){
             const CodeMareFi = new Discord.MessageEmbed()
             .setDescription(`${message.author} - **Lütfen Sebep Belirt**`)
             .setColor('BLACK')
-            .setFooter('Dijitalaile - @bi')
+            .setFooter('Kayser-i Rum')
             return message.channel.send(CodeMareFi)
         }
 
@@ -51,7 +51,7 @@ const Discord = require('discord.js')
                 \` ˑ \`Ban Nedeni - **${sebep}**
             `)
             .setColor('BLACK')
-            .setFooter('Dijitalaile - @bi | ' + cmfzaman)
+            .setFooter('Kayser-i Rum | ' + cmfzaman)
             message.channel.send(CodeMareFi)
         }
     }

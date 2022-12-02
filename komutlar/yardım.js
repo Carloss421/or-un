@@ -11,7 +11,7 @@ const yardım = new Discord.MessageEmbed()
   .addField(" \Güncelleme Notları:", "**Güncelleme v0.5:** 23 Komutluk bir güncelleme ile birikte eğlence komutları geldi.")
 
   .setImage("")
-.setFooter("@bi - Dijitalaile", message.author.avatarURL())
+.setFooter("Kayser-i Rum", message.author.avatarURL())
 .setTimestamp()
   message.channel.send(yardım)
 }

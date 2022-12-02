@@ -49,7 +49,7 @@ exports.run = (client, message, args) => {
       .addField("En düşük sıcaklık", tahminler[0].low, true)
       .addField("Nem", `${current.humidity}%`, true)
       .setTimestamp()
-      .setFooter("Dijitalaile - @bi", client.user.avatarURL());
+      .setFooter("Kayser-i Rum", client.user.avatarURL());
     message.channel.send({ embed });
   });
 };

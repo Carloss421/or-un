@@ -837,6 +837,7 @@ const küfür = [
   "orosbu",
   "orosbucocu",
   "oç",
+  "oc",
   ".oc",
   "ibne",
   "yavşak",
@@ -853,6 +854,12 @@ const küfür = [
   "skim",
   "skm",
   "sg",
+  "mk",
+  "YARRAK",
+  "YRK",
+  "sıkem",
+  "sikem",
+  "YARRRAAAKK",
 ];
 client.on("messageUpdate", async (old, nev) => {
   if (old.content != nev.content) {

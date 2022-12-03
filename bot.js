@@ -13,7 +13,7 @@ const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 const matthe = require("discord-buttons");
 matthe(client);
-const çekkk = new (require("rss-parser"))();
+const rss = require('rss-converter');
 
 
 //-----------------------------------------------\\
@@ -967,9 +967,6 @@ client.on("guildCreate", guild => {
             break channelLoop;
         }
     }
-
-    let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
-    channel.send(`Merhaba ben @bi. Dijitalaile'nin bir üyesi olmak için https://discord.gg/DMgPJDNTVc sunucusuna gelebilirsiniz. Ayrıca tüm öneri ve şikayetleri discord sunucumuzdan yapabilir Yapımcım: Niyazi Çiftçi#8391'ye discord sunucumuzdan ulaşabilirsiniz.`);
 });
 client.on("guildMemberRemove", async member => {
   //let resimkanal = JSON.parse(fs.readFileSync("./ayarlar/gç.json", "utf8"));
@@ -1114,13 +1111,10 @@ client.on('messageDelete', message => {
   db.set(`snipe.mesaj.${message.guild.id}`, message.content)
   db.set(`snipe.id.${message.guild.id}`, message.author.id)
 })
-client.on("ready", () => {
-    console.log("Giriş yapıldı!");
-    handleUploads();
-});
+
 //Aşağıdaki koddan hiç birşey ellemeyin
     setInterval(async () => {
-    let feed = await rss.toJson('https://www.youtube.com/feeds/videos.xml?channel_id=' + ayarlar.channel_yt);
+    let feed = await rss.toJson('https://www.youtube.com/feeds/videos.xml?channel_id=' + asreaper.channel_yt);
     let jsonOpen = fs.readFileSync('./link-data.json');
     let json = JSON.parse(jsonOpen);
     if (jsonOpen.includes(feed.items[0].yt_videoId)) return;
@@ -1135,6 +1129,6 @@ client.on("ready", () => {
     .addField("**Beğeni Ortalaması**", feed.items[0].media_group.media_community.media_starRating_average, true)
     .addField("**Görüntüleme**", feed.items[0].media_group.media_community.media_statistics_views, true)
     .setImage(feed.items[0].media_group.media_thumbnail_url)
-    .setFooter("Developed By Ewing")
+    .setFooter("Developed By Niyazi Çiftçi")
     client.channels.cache.get(asreaper.channel_id).send(`Merhaba! **${feed.author.name}** yeni video yükledi Like Atmayı Yorum Yapmayı Unutma!\n\nİzle: https://www.youtube.com/watch?v=${feed.items[0].yt_videoId}`, embed)
     }, 60000);

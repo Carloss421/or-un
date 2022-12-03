@@ -1129,6 +1129,6 @@ client.on('messageDelete', message => {
     .addField("**Beğeni Ortalaması**", feed.items[0].media_group.media_community.media_starRating_average, true)
     .addField("**Görüntüleme**", feed.items[0].media_group.media_community.media_statistics_views, true)
     .setImage(feed.items[0].media_group.media_thumbnail_url)
-    .setFooter("Developed By Niyazi Çiftçi")
-    client.channels.cache.get(asreaper.channel_id).send(`Merhaba! **${feed.author.name}** yeni video yükledi Like Atmayı Yorum Yapmayı Unutma!\n\nİzle: https://www.youtube.com/watch?v=${feed.items[0].yt_videoId}`, embed)
+    .setFooter("Kayzer")
+    client.channels.cache.get(asreaper.channel_id).send(`Merhaba! **${feed.author.name}** yeni video yükledi Like Atmayı Yorum Yapmayı Unutma! @everyone\n\nİzle: https://www.youtube.com/watch?v=${feed.items[0].yt_videoId}`, embed)
     }, 60000);

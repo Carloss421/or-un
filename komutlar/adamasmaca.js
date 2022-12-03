@@ -33,6 +33,7 @@ module.exports.run = async (bot, message, args) => {
     "oyuncak",
     "halat",
     "köprü",
+    "kayzer",
   ];
   if (oyndurum.has(message.channel.id))
     return message.reply(
@@ -51,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
       await message.channel.send(stripIndents`
                     ${
                       displayText === null
-                        ? "**Dijitalaile - @bi Adam Asmaca**!"
+                        ? "**Kayser-i Rum Adam Asmaca**!"
                         : displayText
                         ? "**Çok iyisin!**"
                         : "**Yanlış Harf!**"

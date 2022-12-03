@@ -1,8 +1,6 @@
 {
   "prefix": "!",
   "sahip": ["692804946461982841","331765705168912384"],
-   "channel": "", //mesajın göndereliceği kanal id
-    "messageTemplate": "Hey `@everyone`, **{author}** Yeni Video Yükledi: **{title}**!\n{url}",
-    "channel_id": "", //youtube kanalının id si 
-    "watchInterval": 30000 //kontol etme zamanı şu an 30saniye ye ayarlı
+  "channel_id":"1001154401706180669",
+  "channel_yt":"UCtlDf-8jNxxLBftIOPVRvJA"
 }

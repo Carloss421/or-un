@@ -1119,24 +1119,22 @@ client.on("ready", () => {
     handleUploads();
 });
 //Aşağıdaki koddan hiç birşey ellemeyin
-function handleUploads() {
-    if (db.fetch(`postedVideos`) === null) db.set(`postedVideos`, []);
-    setInterval(() => {
-        çekkk.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=${asreaper.channel_id}`)
-        .then(codare => {
-            if (db.fetch(`postedVideos`).includes(codare.items[0].link)) return;
-            else {
-                db.set(`videoData`, codare.items[0]);
-                db.push("postedVideos", codare.items[0].link);
-                let videocum = db.fetch(`videoData`);
-                let channel = client.channels.cache.get(asreaper.channel);
-                if (!channel) return;
-                let message = asreaper.messageTemplate
-                    .replace(/{author}/g, videocum.author)
-                    .replace(/{title}/g, Discord.Util.escapeMarkdown(videocum.title))
-                    .replace(/{url}/g, videocum.link);
-                channel.send({content: `${message}`});
-            }
-        });
-    }, asreaper.watchInterval);
-}
+    setInterval(async () => {
+    let feed = await rss.toJson('https://www.youtube.com/feeds/videos.xml?channel_id=' + ayarlar.channel_yt);
+    let jsonOpen = fs.readFileSync('./link-data.json');
+    let json = JSON.parse(jsonOpen);
+    if (jsonOpen.includes(feed.items[0].yt_videoId)) return;
+    json.push(feed.items[0].yt_videoId);
+    let jsonLink = JSON.stringify(json);
+    fs.writeFileSync('./link-data.json', jsonLink);
+    const embed = new Discord.MessageEmbed()
+    .setColor("#ff4fa7")
+    .setAuthor("Yeni video var!", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Youtube%28amin%29.png")
+    .addField("**Başlık**", feed.items[0].media_group.media_title)
+    .addField("**Beğeni Sayısı**", feed.items[0].media_group.media_community.media_starRating_count, true)
+    .addField("**Beğeni Ortalaması**", feed.items[0].media_group.media_community.media_starRating_average, true)
+    .addField("**Görüntüleme**", feed.items[0].media_group.media_community.media_statistics_views, true)
+    .setImage(feed.items[0].media_group.media_thumbnail_url)
+    .setFooter("Developed By Ewing")
+    client.channels.cache.get(asreaper.channel_id).send(`Merhaba! **${feed.author.name}** yeni video yükledi Like Atmayı Yorum Yapmayı Unutma!\n\nİzle: https://www.youtube.com/watch?v=${feed.items[0].yt_videoId}`, embed)
+    }, 60000);

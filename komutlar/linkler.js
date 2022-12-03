@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     .setTitle("Kayser-i Rum")
     .setThumbnail(client.user.displayAvatarURL())
     .setColor("BLUE")
-    .setDescription("**Youtube - Kayzer: https://www.youtube.com/@KayseriRum \n TikTok - KayzerTurco : https://www.tiktok.com/@kayzerturco \n Discord: https://discord.gg/QzgN3nJ2PG **")
+    .setDescription("**Youtube - Kayzer: https://www.youtube.com/@KayseriRum \n TikTok - KayzerTurco : https://www.tiktok.com/@kayzerturco \n Discord: https://discord.gg/QzgN3nJ2PG \n İnstagram: @kayzerturco **")
     .setTimestamp()
     message.channel.send(yenilikler) 
   

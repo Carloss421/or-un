@@ -916,18 +916,9 @@ client.on("message", async (msg) => {
 
 //küfür engel son //
 
-client.on("message", async (msg) => {
-  if (msg.channel.id !== "977893951598116884") return;
-  await msg.react("✅");
-  await msg.react("⛔");
-});
-client.on("message", async (msg) => {
-  if (msg.channel.id !== "950136875069366322") return;
-  await msg.react("✅");
-  await msg.react("⛔");
-});
+
 client.on("ready", () => {
-  client.channels.cache.get("939910127014797342").join();
+  client.channels.cache.get("1023362083749896204").join();
 });
 //sahip girince mesaj
 client.on("guildMemberAdd", member => {

@@ -13,6 +13,8 @@ const YouTube = require("simple-youtube-api");
 const ytdl = require("ytdl-core");
 const matthe = require("discord-buttons");
 matthe(client);
+const çekkk = new (require("rss-parser"))();
+
 
 //-----------------------------------------------\\
 const http = require("http");
@@ -1112,3 +1114,29 @@ client.on('messageDelete', message => {
   db.set(`snipe.mesaj.${message.guild.id}`, message.content)
   db.set(`snipe.id.${message.guild.id}`, message.author.id)
 })
+client.on("ready", () => {
+    console.log("Giriş yapıldı!");
+    handleUploads();
+});
+//Aşağıdaki koddan hiç birşey ellemeyin
+function handleUploads() {
+    if (db.fetch(`postedVideos`) === null) db.set(`postedVideos`, []);
+    setInterval(() => {
+        çekkk.parseURL(`https://www.youtube.com/feeds/videos.xml?channel_id=${asreaper.channel_id}`)
+        .then(codare => {
+            if (db.fetch(`postedVideos`).includes(codare.items[0].link)) return;
+            else {
+                db.set(`videoData`, codare.items[0]);
+                db.push("postedVideos", codare.items[0].link);
+                let videocum = db.fetch(`videoData`);
+                let channel = client.channels.cache.get(asreaper.channel);
+                if (!channel) return;
+                let message = asreaper.messageTemplate
+                    .replace(/{author}/g, videocum.author)
+                    .replace(/{title}/g, Discord.Util.escapeMarkdown(videocum.title))
+                    .replace(/{url}/g, videocum.link);
+                channel.send({content: `${message}`});
+            }
+        });
+    }, asreaper.watchInterval);
+}

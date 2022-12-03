@@ -331,7 +331,7 @@ client.on("guildMemberAdd", async (member) => {
   const benwestranasilsinizefenimmmmasdasd = new Discord.MessageEmbed()
     .setColor("BLUE")
     .setTimestamp()
-    .setFooter(`Feka`)
+    .setFooter(`Kayser-i Rum`)
     .setDescription(
       " **" +
         member.user.username +

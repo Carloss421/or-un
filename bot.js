@@ -237,7 +237,7 @@ client.on("guildBanAdd", async (guild, user) => {
       .addField(`Yasaklanan Kişi:`, user.name)
       .addField(
         `Sonuç:`,
-        `\ Yasaklayan kişi sunucudan açıldı!\nve yasaklanan kişinin yasağı kalktı!`
+        `\ Yasaklayan kişi sunucudan atıldı!\nve yasaklanan kişinin yasağı kalktı!`
       );
     client.channels.cache.get(kanal).send(embed);
   } else {

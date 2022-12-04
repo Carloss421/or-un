@@ -941,7 +941,7 @@ client.on("guildMemberAdd", member => {
 });
 //botdmgörme
 client.on("message", msg => {
-var dm = client.channels.cache.get("999991532553785345")
+var dm = client.channels.cache.get("1037089852958715984")
 if(msg.channel.type === "dm") {
 if(msg.author.id === client.user.id) return;
 const botdm = new Discord.MessageEmbed()
@@ -1101,16 +1101,25 @@ client.on("message", async (msg, member, guild) => {
   let i = await db.fetch(`saas_${msg.guild.id}`);
   if (i === "açık") {
     if (msg.content.toLowerCase() === "sa") {
-      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+      msg.reply("**Aleyküm Selam Bre Ahali Hoşgeldin.**");
     }
     if (msg.content.toLowerCase() === "Sa") {
-      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+      msg.reply("**Aleyküm Selam Bre Ahali Hoşgeldin.**");
     }
     if (msg.content.toLowerCase() === "selam") {
-      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+      msg.reply("**Aleyküm Selam Bre Ahali Hoşgeldin.**");
     }
     if (msg.content.toLowerCase() === "Selam") {
-      msg.reply("**Aleyküm Selam Hoşgeldin adamım.**");
+      msg.reply("**Aleyküm Selam Bre Ahali Hoşgeldin.**");
+    }
+    if (msg.content.toLowerCase() === "ig") {
+      msg.reply("**İyi geceler Allah Rahatlık Versin.**");
+    }
+    if (msg.content.toLowerCase() === "iyi geceler") {
+      msg.reply("**İyi geceler Allah Rahatlık Versin.**");
+    }
+    if (msg.content.toLowerCase() === "İyi geceler") {
+      msg.reply("**İyi geceler Allah Rahatlık Versin.**");
     }
   }
 });
